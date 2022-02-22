@@ -1,9 +1,7 @@
 use crate::words::*;
 use crate::word_sets::*;
 
-use std::collections::{HashMap, HashSet};
-
-pub fn avg_remaining_turns(words: usize) -> f64 {
+pub fn avg_turns(words: usize) -> f64 {
     let mut words = words as f64;
 
     let mut out = 0.;
@@ -112,23 +110,9 @@ impl AvgNode {
                 let weight = words.count_ones() as f64;
 
                 guess_denom += weight;
-                guess_average += avg_remaining_turns(weight as usize) * weight;
+                guess_average += avg_turns(weight as usize) * weight;
             }
         }
-
-        // if GUESS_WORDS[guess] == "trace" {
-            // println!("{:x?} {} {}", parent_words, guess_average, guess_denom);
-            // let mut full = BitSet::zeros(SOLUTION_WORDS.len());
-
-            // for set in &GUESS_HINT_TABLE[guess] {
-                // if set.len() > 0 {
-                    // full |= set;
-                // }
-            // }
-
-            // println!("{}", full.count_ones());
-            // panic!();
-        // }
 
         guess_average /= guess_denom;
         guess_average += 1.;
@@ -187,7 +171,7 @@ impl AvgNode {
             if i < self.branches().len() {
                 guess_average += (self.branches()[i].turns + 1.) * weight;
             } else {
-                guess_average += (avg_remaining_turns(weight as usize) + 1.) * weight;
+                guess_average += (avg_turns(weight as usize) + 1.) * weight;
             }
         }
 
@@ -195,7 +179,7 @@ impl AvgNode {
     }
 
     pub fn complete(&self) -> bool {
-        if let Turns(s) = self {
+        if let Turns(_) = self {
             false
         } else {
             self.branches().len() == self.hint_ordering().len()
