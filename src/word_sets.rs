@@ -1,14 +1,14 @@
 use crate::words::*;
 
-use packed_simd::{u8x32, u64x4, IntoBits};
+use packed_simd::u64x4;
 
-const BLOCK_BYTES: usize = 32;
-const BLOCK_BITS : usize = BLOCK_BYTES * 8;
+const BLOCK_BYTES: usize = 4;
+const BLOCK_BITS : usize = BLOCK_BYTES * 64;
 
 #[derive(Clone, Debug)]
 pub struct BitSet {
     len: usize,
-    pub(crate) bits: Vec<u8>
+    pub(crate) bits: Vec<u64>
 }
 
 impl BitSet {
@@ -30,10 +30,10 @@ impl BitSet {
         let mut out = Self::new();
 
         out.len = n;
-        out.bits = vec![0xff; n / BLOCK_BITS * BLOCK_BYTES];
+        out.bits = vec![u64::MAX; n / BLOCK_BITS * BLOCK_BYTES];
 
-        if n % 8 != 0 {
-            out.bits.push((1 << n % 8) - 1)
+        if n % 64 != 0 {
+            out.bits.push((1 << n % 64) - 1)
         }
 
         while out.bits.len() % BLOCK_BYTES != 0 {
@@ -63,16 +63,16 @@ impl BitSet {
         self.len += 1;
 
         if item {
-            self.bits[self.len / 8] |= 1 << self.len % 8;
+            self.bits[self.len / 64] |= 1 << self.len % 64;
         }
     }
 
     pub fn add(&mut self, ind: usize) {
-        self.bits[ind / 8] |= 1 << ind % 8
+        self.bits[ind / 64] |= 1 << ind % 64
     }
 
     pub fn remove(&mut self, ind: usize) {
-        self.bits[ind / 8] &= !(1 << ind % 8)
+        self.bits[ind / 64] &= !(1 << ind % 64)
     }
 
     pub fn len(&self) -> usize {self.len}
@@ -80,14 +80,22 @@ impl BitSet {
     pub fn count_ones(&self) -> usize {
         let mut vec = u64x4::splat(0);
 
-        for i in (0..self.bits.len()).step_by(32) {
+        for i in (0..self.bits.len()).step_by(8) {
             // cast to u64s to prevent overflows
-            let vec2: u64x4 = u8x32::from_slice_unaligned(&self.bits[i..i+32]).into_bits();
+            let vec2: u64x4 = u64x4::from_slice_unaligned(&self.bits[i..i+8]);
 
             vec += vec2.count_ones();
         }
 
         vec.wrapping_sum() as usize
+    }
+
+    pub fn iter(&self) -> Iter {
+        Iter {
+            bits: &self.bits,
+            idx: 0,
+            num: self.bits[0]
+        }
     }
 }
 
@@ -115,13 +123,13 @@ use std::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign};
 
 impl BitAndAssign<&BitSet> for BitSet {
     fn bitand_assign(&mut self, rhs: &Self) {
-        for i in (0..self.bits.len()).step_by(32) {
-            let mut vec1 = u8x32::from_slice_unaligned(&self.bits[i..i+32]);
-            let     vec2 = u8x32::from_slice_unaligned(&rhs .bits[i..i+32]);
+        for i in (0..self.bits.len()).step_by(BLOCK_BYTES) {
+            let mut vec1 = u64x4::from_slice_unaligned(&self.bits[i..i+BLOCK_BYTES]);
+            let     vec2 = u64x4::from_slice_unaligned(&rhs .bits[i..i+BLOCK_BYTES]);
 
             vec1 &= vec2;
 
-            vec1.write_to_slice_unaligned(&mut self.bits[i..i+32])
+            vec1.write_to_slice_unaligned(&mut self.bits[i..i+BLOCK_BYTES])
         }
     }
 }
@@ -138,13 +146,13 @@ impl BitAnd<&BitSet> for BitSet {
 
 impl BitOrAssign<&BitSet> for BitSet {
     fn bitor_assign(&mut self, rhs: &Self) {
-        for i in (0..self.bits.len()).step_by(32) {
-            let mut vec1 = u8x32::from_slice_unaligned(&self.bits[i..i+32]);
-            let     vec2 = u8x32::from_slice_unaligned(&rhs .bits[i..i+32]);
+        for i in (0..self.bits.len()).step_by(BLOCK_BYTES) {
+            let mut vec1 = u64x4::from_slice_unaligned(&self.bits[i..i+BLOCK_BYTES]);
+            let     vec2 = u64x4::from_slice_unaligned(&rhs .bits[i..i+BLOCK_BYTES]);
 
             vec1 |= vec2;
 
-            vec1.write_to_slice_unaligned(&mut self.bits[i..i+32])
+            vec1.write_to_slice_unaligned(&mut self.bits[i..i+BLOCK_BYTES])
         }
     }
 }
@@ -185,6 +193,31 @@ pub fn gen_guess_hint_table() -> Vec<Vec<BitSet>> {
     out
 }
 
+pub struct Iter<'a> {
+    bits: &'a [u64],
+    idx: usize,
+    num: u64,
+}
+
+impl<'a> Iterator for Iter<'a> {
+    type Item = usize;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        while self.idx < self.bits.len() - 1 && self.num == 0 {
+            self.idx += 1;
+            self.num = self.bits[self.idx];
+        }
+
+        if self.num == 0 {
+            None
+        } else {
+            let out = self.num.trailing_zeros() as usize;
+            self.num &= self.num - 1;
+            Some(out + self.idx * 64)
+        }
+    }
+}
+
 lazy_static! {
     pub static ref GUESS_HINT_TABLE: Vec<Vec<BitSet>> = {
         gen_guess_hint_table()
@@ -193,7 +226,7 @@ lazy_static! {
 
 pub fn print_word_set(set: &BitSet) {
     for i in 0..set.len() {
-        if set.bits[i / 8] & 1 << i % 8 != 0 {
+        if set.bits[i / 64] & 1 << i % 64 != 0 {
             print!("{} ", SOLUTION_WORDS[i]);
         }
     }

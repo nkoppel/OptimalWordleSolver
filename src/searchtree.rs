@@ -1,27 +1,73 @@
 use crate::words::*;
 use crate::word_sets::*;
 
-pub fn avg_turns(words: usize) -> f64 {
-    let mut words = words as f64;
+use std::cell::RefCell;
 
+fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut Vec<usize>, words: I, guess: usize) {
+    for w in words {
+        buf[TABLE[guess][w] as usize] += 1;
+    }
+}
+
+fn weighted_average<I, J>(weights: I, nums: J) -> f64
+    where I: Iterator<Item=f64>, J: Iterator<Item=f64>
+{
     let mut out = 0.;
-    let mut denom = 1.;
-    let mut i = 1.;
+    let mut sum = 0.;
 
-    while words > 1. {
-        out += i / words;
-        denom -= 1. / words;
-
-        words /= HINT_POSSIBILITIES as f64;
-        i += 1.;
+    for (weight, num) in weights.zip(nums) {
+        if weight != 0. {
+            out += weight * num;
+            sum += weight;
+        }
     }
 
-    out + i * denom
+    if sum == 0. {
+        0.
+    } else {
+        out / sum
+    }
+}
+
+thread_local!(static BUFFER: RefCell<Vec<usize>> = RefCell::new(vec![0; HINT_POSSIBILITIES]));
+
+pub fn avg_entropy<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
+    let mut out = 0.;
+
+    BUFFER.with(|buf| {
+        let mut buf = buf.borrow_mut();
+
+        buf.fill(0);
+
+        get_hint_frequency(&mut buf, words, guess);
+
+        let weights = buf.iter().map(|x| *x as f64);
+
+        out = weighted_average(weights.clone(), weights.map(f64::log2));
+
+        // buf.sort_by_key(|x| -(*x as isize));
+        // println!("{:?}", buf);
+        // println!("{:?}", buf.iter().sum::<usize>());
+    });
+
+    out
+}
+
+pub fn best_entropy(words: &BitSet) -> (usize, f64) {
+    let words = words.iter().collect::<Vec<_>>();
+
+    loc_of_min (
+        (0..GUESS_WORDS.len())
+            .map(|g| avg_entropy(words.iter().copied(), g))
+            .filter(|e| *e != 0.)
+    ).unwrap_or((GUESS_WORDS.len(), 0.))
 }
 
 // returns the location of the minimum value in an iterator
 // if equal elements are present, returns the first occurrence
-fn loc_of_min<I: Iterator<Item=T>, T: PartialOrd>(iter: I) -> Option<(usize, T)> {
+fn loc_of_min<I, T>(iter: I) -> Option<(usize, T)>
+    where I: Iterator<Item=T>, T: PartialOrd
+{
     iter
         .enumerate()
         .reduce(|(i1, x1), (i2, x2)| {
@@ -36,182 +82,112 @@ fn loc_of_min<I: Iterator<Item=T>, T: PartialOrd>(iter: I) -> Option<(usize, T)>
 #[derive(Clone, Debug)]
 pub struct BestNode {
     pub(crate) best_guess: usize,
-    pub(crate) turns: f64,
-    pub(crate) words: BitSet,
+    pub(crate) entropy: f64,
 
-    pub(crate) branches: Vec<AvgNode>
+    pub(crate) branches: Vec<Result<AvgNode, f64>>
 }
 
 #[derive(Clone, Debug)]
-pub enum AvgNode {
-    Turns(f64),
-    Node {
-        turns: f64,
+pub struct AvgNode {
+    pub(crate) entropy: f64,
 
-        hint_ordering: Vec<u8>,
-        next_branch: usize,
-        branches: Vec<BestNode>,
-    }
-}
-
-use AvgNode::*;
-
-macro_rules! node_field {
-    ($field:ident, $func2:ident, $result:ty) => {
-        pub fn $field(&self) -> &$result {
-            match self {
-                Node{$field: x, ..} => x,
-                _ => panic!()
-            }
-        }
-
-        pub fn $func2(&mut self) -> &mut $result {
-            match self {
-                Node{$field: x, ..} => x,
-                _ => panic!()
-            }
-        }
-
-    }
+    pub(crate) hint_ordering: Vec<u8>,
+    pub(crate) next_branch: usize,
+    pub(crate) branches: Vec<Result<BestNode, f64>>
 }
 
 impl AvgNode {
-    pub fn new() -> Self {
-        Turns(0.)
-    }
-
-    pub fn turns(&self) -> f64 {
-        match self {
-            Turns(t) | Node{turns: t, ..} => *t
-        }
-    }
-
-    pub fn turns_mut(&mut self) -> &mut f64 {
-        match self {
-            Turns(t) | Node{turns: t, ..} => t
-        }
-    }
-
-    node_field!(hint_ordering, hint_ordering_mut, Vec<u8>);
-    node_field!(next_branch, next_branch_mut, usize);
-    node_field!(branches, branches_mut, Vec<BestNode>);
-
-    pub fn init_turns(&mut self, guess: usize, parent_words: &BitSet) {
-        let mut guess_average = 0.;
-        let mut guess_denom = 0.;
-
-        let mut words = BitSet::new();
-
-        for hint in 0..HINT_POSSIBILITIES {
-            if GUESS_HINT_TABLE[guess][hint].len() != 0 {
-                words.clone_from(parent_words);
-                words &= &GUESS_HINT_TABLE[guess][hint];
-
-                let weight = words.count_ones() as f64;
-
-                guess_denom += weight;
-                guess_average += avg_turns(weight as usize) * weight;
-            }
-        }
-
-        guess_average /= guess_denom;
-        guess_average += 1.;
-
-        match self {
-            Turns(t) | Node{turns: t, ..} => *t = guess_average
-        }
-    }
-
-    pub fn init_hint_ordering(&mut self, guess: usize, parent_words: &BitSet) {
-        if let Turns(turns) = self {
-            *self = Node {
-                turns: *turns,
+    pub fn new(guess: usize, parent_words: &BitSet) -> Self {
+        let mut out =
+            Self {
+                entropy: 0.,
                 hint_ordering: Vec::new(),
                 next_branch: 0,
-                branches: Vec::new()
-            }
-        } else {
-            return;
-        }
+                branches: Vec::new(),
+            };
 
-        let mut words = BitSet::new();
-        let mut hints = Vec::new();
+        out.entropy = avg_entropy(parent_words.iter(), guess);
 
-        for hint in 0..HINT_POSSIBILITIES {
-            if GUESS_HINT_TABLE[guess][hint].len() != 0 {
-                words.clone_from(parent_words);
-                words &= &GUESS_HINT_TABLE[guess][hint];
+        BUFFER.with(|buf| {
+            let mut hints = buf
+                .borrow()
+                .iter()
+                .enumerate()
+                .map(|(x,y)| (-(*y as isize), x))
+                .collect::<Vec<_>>();
 
-                let weight = words.count_ones();
+            hints.sort_unstable();
 
-                if weight > 0 {
-                    hints.push((weight, hint));
+            out.hint_ordering = hints
+                .into_iter()
+                .filter(|(x, _)| *x != 0)
+                .map(|x| x.1 as u8)
+                .collect();
+        });
+
+        out
+    }
+
+    pub fn update_entropy(&mut self, guess: usize, parent_words: &BitSet) {
+        let mut freqs = vec![0; HINT_POSSIBILITIES];
+
+        get_hint_frequency(&mut freqs, parent_words.iter(), guess);
+
+        let weights = self.hint_ordering.iter().map(|x| freqs[*x as usize] as f64);
+        let entropies = (0..self.hint_ordering.len())
+            .map(|i| {
+                let n_words = freqs[self.hint_ordering[i] as usize];
+
+                if i < self.branches.len() {
+                    match self.branches[i] {
+                        Ok(BestNode{entropy: e, ..}) | Err(e) => {
+                            // computes log2(effective group size) as the remainging entropy
+                            // after guessing added to an upper bound for entropy reduction in a
+                            // guess
+                            if n_words <= 1 {
+                                0.
+                            } else {
+                                e + (HINT_POSSIBILITIES.min(n_words) as f64).log2()
+                            }
+                        }
+                    }
+                } else {
+                    (n_words as f64).log2()
                 }
-            }
-        }
+            });
 
-        hints.sort_unstable();
-        *self.hint_ordering_mut() = hints.into_iter().map(|x| x.1 as u8).collect();
-    }
-
-    pub fn update_turns(&mut self, guess: usize, parent_words: &BitSet) {
-        let mut guess_average = 0.;
-        let mut guess_denom = 0.;
-
-        let mut words = BitSet::new();
-
-        for (i, hint) in self.hint_ordering().iter().enumerate() {
-            words.clone_from(parent_words);
-            words &= &GUESS_HINT_TABLE[guess][*hint as usize];
-
-            let weight = words.count_ones() as f64;
-
-            guess_denom += weight;
-
-            if i < self.branches().len() {
-                guess_average += (self.branches()[i].turns + 1.) * weight;
-            } else {
-                guess_average += (avg_turns(weight as usize) + 1.) * weight;
-            }
-        }
-
-        *self.turns_mut() = guess_average / guess_denom;
-    }
-
-    pub fn complete(&self) -> bool {
-        if let Turns(_) = self {
-            false
-        } else {
-            self.branches().len() == self.hint_ordering().len()
-                && self.hint_ordering().len() > 0
-        }
+        self.entropy = weighted_average(weights, entropies);
     }
 }
 
 impl BestNode {
     // computes the number of turns remaining and the best word from "guess_turns"
-    pub fn update_turns(&mut self) {
+    pub fn update_entropy(&mut self) {
         let (loc, min) =
-            loc_of_min(self.branches.iter().map(|b| b.turns())).unwrap();
+            loc_of_min(self.branches
+                .iter()
+                .map(|b| match b {
+                    Ok(AvgNode{entropy: e, ..}) | Err(e) => e
+                }))
+                .unwrap();
 
         self.best_guess = loc;
-        self.turns = min;
+        self.entropy = *min;
     }
 
-    pub fn new(words: BitSet) -> Self {
+    pub fn new(words: &BitSet) -> Self {
         let mut out =
             Self {
                 best_guess: 0,
-                turns: 0.,
-                words,
-                branches: vec![AvgNode::new(); GUESS_WORDS.len()],
+                entropy: 0.,
+                branches: vec![Err(0.); GUESS_WORDS.len()],
             };
 
-        for (guess, b) in out.branches.iter_mut().enumerate() {
-            b.init_turns(guess, &out.words);
+        for guess in 0..GUESS_WORDS.len() {
+            out.branches[guess] = Err(avg_entropy(words.iter(), guess));
         }
 
-        out.update_turns();
+        out.update_entropy();
 
         out
     }

@@ -4,50 +4,80 @@ use crate::searchtree::*;
 
 use std::mem;
 
+fn is_complete(r: &Result<AvgNode, f64>) -> bool {
+    if let Ok(node) = r {
+        node.branches.len() == node.hint_ordering.len()
+    } else {
+        false
+    }
+}
+
 impl BestNode {
     pub fn search(&mut self) {
-        let mut stack: Vec<*mut BestNode> = Vec::new();
+        let mut stack: Vec<(*mut BestNode, BitSet)> = Vec::new();
+        let mut words = BitSet::ones(SOLUTION_WORDS.len());
         let mut ptr = self;
 
-        // descend until we create a new tree
-        while ptr.branches[ptr.best_guess].complete() {
+        // descend until we can create a new tree
+        while is_complete(&ptr.branches[ptr.best_guess]) {
+            stack.push((ptr as *mut BestNode, words.clone()));
+
             let guess = ptr.best_guess;
-            let branch_idx = *ptr.branches[guess].next_branch();
+            let avg = ptr.branches[guess].as_mut().unwrap();
+            let branch_idx = avg.next_branch;
 
-            *ptr.branches[guess].next_branch_mut() += 1;
-            *ptr.branches[guess].next_branch_mut() %= ptr.branches[guess].branches().len();
+            avg.next_branch += 1;
+            avg.next_branch %= avg.branches.len();
 
-            stack.push(ptr as *mut BestNode);
+            print!("{} > {} > ", GUESS_WORDS[guess], hint_to_str(avg.hint_ordering[branch_idx]));
 
-            print!("{} > {} > ", GUESS_WORDS[guess], hint_to_str(ptr.branches[guess].hint_ordering()[branch_idx]));
+            words &= &GUESS_HINT_TABLE[guess][avg.hint_ordering[branch_idx] as usize];
 
-            ptr = &mut ptr.branches[guess].branches_mut()[branch_idx];
+            if words.count_ones() <= 1 {
+                println!("EXIT");
+                return;
+            }
+
+            if avg.branches[branch_idx].is_err() {
+                avg.branches[branch_idx] = Ok(BestNode::new(&words));
+            }
+
+            ptr = avg.branches[branch_idx].as_mut().unwrap();
         }
 
-        // create the new tree
+        stack.push((ptr as *mut BestNode, words.clone()));
+
+        // create a new tree
         let guess = ptr.best_guess;
 
         println!("{}", GUESS_WORDS[guess]);
 
-        ptr.branches[guess].init_hint_ordering(guess, &ptr.words);
+        if ptr.branches[guess].is_err() {
+            ptr.branches[guess] = Ok(AvgNode::new(guess, &words));
+        }
 
-        let hint = ptr.branches[guess].hint_ordering()[ptr.branches[guess].branches().len()] as usize;
-        let tree = BestNode::new(ptr.words.clone() & &GUESS_HINT_TABLE[guess][hint]);
+        let avg = ptr.branches[guess].as_mut().unwrap();
 
-        stack.push(ptr as *mut BestNode);
+        if avg.hint_ordering.len() == 0 {
+            return;
+        }
 
-        ptr.branches[guess].branches_mut().push(tree);
+        // println!("{:?}", avg);
+        words &= &GUESS_HINT_TABLE[guess][avg.hint_ordering[avg.branches.len()] as usize];
+
+        avg.branches.push(Err(best_entropy(&words).1));
 
         mem::drop(ptr);
 
-        // ascend and update all parent trees
-        while let Some(ptr) = stack.pop() {
+        // propogate error upwards
+        for (ptr, words) in stack.into_iter().rev() {
             let ptr = unsafe{ptr.as_mut()}.unwrap();
 
             let guess = ptr.best_guess;
+            let avg = ptr.branches[guess].as_mut().unwrap();
 
-            ptr.branches[guess].update_turns(guess, &ptr.words);
-            ptr.update_turns();
+            avg.update_entropy(guess, &words);
+            ptr.update_entropy();
         }
     }
 }

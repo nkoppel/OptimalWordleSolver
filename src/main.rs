@@ -15,15 +15,17 @@ use searchtree::*;
 use search::*;
 
 fn main() {
-    // println!("{:?}", gen_guess_hint_table()[GUESS_MAP["trace"]]
-        // .iter()
-        // .map(|x| {
-            // let weight = x.clone().count_ones();
+    // let mut list = Vec::new();
 
-            // avg_remaining_turns(weight) * weight as f64 / SOLUTION_WORDS.len() as f64
-        // })
-        // .sum::<f64>() + 1.
-    // );
+    // for i in 0..GUESS_WORDS.len() {
+        // list.push((avg_entropy(0..SOLUTION_WORDS.len(), i), i));
+    // }
+
+    // list.sort_by(|x, y| x.0.partial_cmp(&y.0).unwrap());
+
+    // for (turns, w) in list {
+        // println!("{} {}", GUESS_WORDS[w], turns);
+    // }
 
     // for i in 0..100 {
         // let tree = BestNode::new(BitSet::ones(SOLUTION_WORDS.len()));
@@ -31,23 +33,28 @@ fn main() {
         // println!("{} {}", i, GUESS_WORDS[tree.best_guess]);
     // }
 
-    let mut tree = BestNode::new(BitSet::ones(SOLUTION_WORDS.len()));
+    let all_words = BitSet::ones(SOLUTION_WORDS.len());
+
+    let mut tree = BestNode::new(&all_words);
+
+    println!("{}", tree.entropy);
+    println!("{}", tree.branches[tree.best_guess].as_ref().unwrap_err());
 
     for i in 0.. {
-        print!("{} {} ", i, tree.turns);
+        print!("{} {} ", i, tree.entropy);
         tree.search();
     }
 
-    let mut guess_turns =
-        tree.branches
-            .iter()
-            .map(|b| b.turns())
-            .enumerate()
-            .collect::<Vec<_>>();
+    // let mut guess_turns =
+        // tree.branches
+            // .iter()
+            // .map(|b| b.turns())
+            // .enumerate()
+            // .collect::<Vec<_>>();
 
-    guess_turns.sort_by(|x, y| x.1.partial_cmp(&y.1).unwrap());
+    // guess_turns.sort_by(|x, y| x.1.partial_cmp(&y.1).unwrap());
 
-    for (word, turns) in guess_turns {
-        println!("{} {}", GUESS_WORDS[word], turns);
-    }
+    // for (word, turns) in guess_turns {
+        // println!("{} {}", GUESS_WORDS[word], turns);
+    // }
 }
