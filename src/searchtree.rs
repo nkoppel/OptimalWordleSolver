@@ -3,6 +3,10 @@ use crate::word_sets::*;
 
 use std::cell::RefCell;
 
+// represents the hint which indicates that the correct
+// word has been guessed and the game is over
+const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
+
 pub fn avg_turns(words: usize) -> f64 {
     let mut words = words as f64;
 
@@ -64,7 +68,13 @@ pub fn guess_turns<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
         get_hint_frequency(&mut buf, words, guess);
 
         let weights = buf.iter().map(|x| *x as f64);
-        let turns = buf.iter().map(|w| avg_turns(*w));
+        let turns = buf.iter().enumerate().map(|(i, w)| {
+            if i == ALL_GREEN {
+                0.
+            } else {
+                avg_turns(*w)
+            }
+        });
 
         out = weighted_average(weights, turns);
     });
@@ -152,22 +162,22 @@ impl AvgNode {
 
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
 
+        // println!("{:?}", freqs);
+        // println!("{:?}", self.hint_ordering);
+
         let weights = self.hint_ordering.iter().map(|x| freqs[*x as usize] as f64);
         let entropies = (0..self.hint_ordering.len())
             .map(|i| {
-                let n_words = freqs[self.hint_ordering[i] as usize];
+                let hint = self.hint_ordering[i] as usize;
+                let n_words = freqs[hint];
 
-                if i < self.branches.len() {
+                if n_words == 0 || hint == ALL_GREEN {
+                    0.
+                } else if n_words == 1 {
+                    1.
+                } else if i < self.branches.len() {
                     match self.branches[i] {
-                        Ok(BestNode{turns: t, ..}) | Err(t) => {
-                            if n_words == 0 {
-                                0.
-                            } else if n_words == 1 {
-                                1.
-                            } else {
-                                t
-                            }
-                        }
+                        Ok(BestNode{turns: t, ..}) | Err(t) => t
                     }
                 } else {
                     avg_turns(n_words)
