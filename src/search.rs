@@ -65,7 +65,7 @@ impl BestNode {
         // println!("{:?}", avg);
         words &= &GUESS_HINT_TABLE[guess][avg.hint_ordering[avg.branches.len()] as usize];
 
-        avg.branches.push(Err(best_entropy(&words).1));
+        avg.branches.push(Err(best_turns(&words).1));
 
         mem::drop(ptr);
 
@@ -76,8 +76,8 @@ impl BestNode {
             let guess = ptr.best_guess;
             let avg = ptr.branches[guess].as_mut().unwrap();
 
-            avg.update_entropy(guess, &words);
-            ptr.update_entropy();
+            avg.update_turns(guess, &words);
+            ptr.update_turns();
         }
     }
 }

@@ -3,6 +3,28 @@ use crate::word_sets::*;
 
 use std::cell::RefCell;
 
+pub fn avg_turns(words: usize) -> f64 {
+    let mut words = words as f64;
+
+    if words == 0. {
+        return 0.;
+    }
+
+    let mut out = 0.;
+    let mut denom = 1.;
+    let mut i = 1.;
+
+    while words > 1. {
+        out += i / words;
+        denom -= 1. / words;
+
+        words /= HINT_POSSIBILITIES as f64;
+        i += 1.;
+    }
+
+    out + i * denom
+}
+
 fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut Vec<usize>, words: I, guess: usize) {
     for w in words {
         buf[TABLE[guess][w] as usize] += 1;
@@ -31,7 +53,7 @@ fn weighted_average<I, J>(weights: I, nums: J) -> f64
 
 thread_local!(static BUFFER: RefCell<Vec<usize>> = RefCell::new(vec![0; HINT_POSSIBILITIES]));
 
-pub fn avg_entropy<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
+pub fn guess_turns<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
     let mut out = 0.;
 
     BUFFER.with(|buf| {
@@ -42,25 +64,12 @@ pub fn avg_entropy<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
         get_hint_frequency(&mut buf, words, guess);
 
         let weights = buf.iter().map(|x| *x as f64);
+        let turns = buf.iter().map(|w| avg_turns(*w));
 
-        out = weighted_average(weights.clone(), weights.map(f64::log2));
-
-        // buf.sort_by_key(|x| -(*x as isize));
-        // println!("{:?}", buf);
-        // println!("{:?}", buf.iter().sum::<usize>());
+        out = weighted_average(weights, turns);
     });
 
     out
-}
-
-pub fn best_entropy(words: &BitSet) -> (usize, f64) {
-    let words = words.iter().collect::<Vec<_>>();
-
-    loc_of_min (
-        (0..GUESS_WORDS.len())
-            .map(|g| avg_entropy(words.iter().copied(), g))
-            .filter(|e| *e != 0.)
-    ).unwrap_or((GUESS_WORDS.len(), 0.))
 }
 
 // returns the location of the minimum value in an iterator
@@ -79,17 +88,27 @@ fn loc_of_min<I, T>(iter: I) -> Option<(usize, T)>
         })
 }
 
+pub fn best_turns(words: &BitSet) -> (usize, f64) {
+    let words = words.iter().collect::<Vec<_>>();
+
+    loc_of_min (
+        (0..GUESS_WORDS.len())
+            .map(|g| 1. + guess_turns(words.iter().copied(), g))
+            .filter(|t| *t != 0.)
+    ).unwrap_or((GUESS_WORDS.len(), 0.))
+}
+
 #[derive(Clone, Debug)]
 pub struct BestNode {
     pub(crate) best_guess: usize,
-    pub(crate) entropy: f64,
+    pub(crate) turns: f64,
 
     pub(crate) branches: Vec<Result<AvgNode, f64>>
 }
 
 #[derive(Clone, Debug)]
 pub struct AvgNode {
-    pub(crate) entropy: f64,
+    pub(crate) turns: f64,
 
     pub(crate) hint_ordering: Vec<u8>,
     pub(crate) next_branch: usize,
@@ -100,13 +119,13 @@ impl AvgNode {
     pub fn new(guess: usize, parent_words: &BitSet) -> Self {
         let mut out =
             Self {
-                entropy: 0.,
+                turns: 0.,
                 hint_ordering: Vec::new(),
                 next_branch: 0,
                 branches: Vec::new(),
             };
 
-        out.entropy = avg_entropy(parent_words.iter(), guess);
+        out.turns = guess_turns(parent_words.iter(), guess);
 
         BUFFER.with(|buf| {
             let mut hints = buf
@@ -128,7 +147,7 @@ impl AvgNode {
         out
     }
 
-    pub fn update_entropy(&mut self, guess: usize, parent_words: &BitSet) {
+    pub fn update_turns(&mut self, guess: usize, parent_words: &BitSet) {
         let mut freqs = vec![0; HINT_POSSIBILITIES];
 
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
@@ -140,54 +159,53 @@ impl AvgNode {
 
                 if i < self.branches.len() {
                     match self.branches[i] {
-                        Ok(BestNode{entropy: e, ..}) | Err(e) => {
-                            // computes log2(effective group size) as the remainging entropy
-                            // after guessing added to an upper bound for entropy reduction in a
-                            // guess
-                            if n_words <= 1 {
+                        Ok(BestNode{turns: t, ..}) | Err(t) => {
+                            if n_words == 0 {
                                 0.
+                            } else if n_words == 1 {
+                                1.
                             } else {
-                                e + (HINT_POSSIBILITIES.min(n_words) as f64).log2()
+                                t
                             }
                         }
                     }
                 } else {
-                    (n_words as f64).log2()
+                    avg_turns(n_words)
                 }
             });
 
-        self.entropy = weighted_average(weights, entropies);
+        self.turns = weighted_average(weights, entropies);
     }
 }
 
 impl BestNode {
     // computes the number of turns remaining and the best word from "guess_turns"
-    pub fn update_entropy(&mut self) {
+    pub fn update_turns(&mut self) {
         let (loc, min) =
             loc_of_min(self.branches
                 .iter()
                 .map(|b| match b {
-                    Ok(AvgNode{entropy: e, ..}) | Err(e) => e
+                    Ok(AvgNode{turns: t, ..}) | Err(t) => t
                 }))
                 .unwrap();
 
         self.best_guess = loc;
-        self.entropy = *min;
+        self.turns = *min + 1.;
     }
 
     pub fn new(words: &BitSet) -> Self {
         let mut out =
             Self {
                 best_guess: 0,
-                entropy: 0.,
+                turns: 0.,
                 branches: vec![Err(0.); GUESS_WORDS.len()],
             };
 
         for guess in 0..GUESS_WORDS.len() {
-            out.branches[guess] = Err(avg_entropy(words.iter(), guess));
+            out.branches[guess] = Err(guess_turns(words.iter(), guess));
         }
 
-        out.update_entropy();
+        out.update_turns();
 
         out
     }

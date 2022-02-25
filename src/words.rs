@@ -85,7 +85,7 @@ pub fn hint_to_str(mut hint: u8) -> String {
         match hint % 3 {
             2 => out.push('g'),
             1 => out.push('y'),
-            _ => out.push('b'),
+            _ => out.push('_'),
         }
 
         hint /= 3;
@@ -95,8 +95,8 @@ pub fn hint_to_str(mut hint: u8) -> String {
 }
 
 lazy_static! {
-    pub static ref GUESS_WORDS   : Vec<String> = read_words("guess_words.txt"   );
-    // pub static ref GUESS_WORDS   : Vec<String> = read_words("solution_words.txt");
+    // pub static ref GUESS_WORDS   : Vec<String> = read_words("guess_words.txt"   );
+    pub static ref GUESS_WORDS   : Vec<String> = read_words("solution_words.txt");
     pub static ref SOLUTION_WORDS: Vec<String> = read_words("solution_words.txt");
 
     pub static ref GUESS_MAP:    HashMap<String, usize> = get_word_map(GUESS_WORDS   .clone());
@@ -116,10 +116,10 @@ extern crate test;
 
 #[test]
 fn t_get_hint() {
-    assert_eq!(get_hint("eagle", "speed"), hint_from_str("ybbby"));
-    assert_eq!(get_hint("bbaba", "bcbcc"), hint_from_str("gybbb"));
-    assert_eq!(get_hint("eagle", "reads"), hint_from_str("yybbb"));
-    assert_eq!(get_hint("perch", "bench"), hint_from_str("bgbgg"));
+    assert_eq!(get_hint("eagle", "speed"), hint_from_str("y___y"));
+    assert_eq!(get_hint("bbaba", "bcbcc"), hint_from_str("gy___"));
+    assert_eq!(get_hint("eagle", "reads"), hint_from_str("yy___"));
+    assert_eq!(get_hint("perch", "bench"), hint_from_str("_g_gg"));
 
     assert_eq!("bgbgg".to_string(), hint_to_str(hint_from_str("bgbgg")));
     assert_eq!(128, hint_from_str(&hint_to_str(128)));
