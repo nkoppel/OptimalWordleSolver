@@ -16,17 +16,7 @@ use searchtree::*;
 use std::fs::File;
 
 fn main() {
-    // let words =
-         // GUESS_HINT_TABLE[GUESS_MAP["salet"]][hint_from_str("_____") as usize].clone() &
-        // &GUESS_HINT_TABLE[GUESS_MAP["courd"]][hint_from_str("____g") as usize].clone();
     let words = BitSet::ones(SOLUTION_WORDS.len());
-    // let mut words = BitSet::zeros(SOLUTION_WORDS.len());
-
-    // words.add(0);
-    // words.add(1);
-    // words.add(2);
-
-    // println!("{:?}", words.iter().map(|i| SOLUTION_WORDS[i].clone()).collect::<Vec<_>>());
 
     let mut tree = BestNode::new(&words);
 

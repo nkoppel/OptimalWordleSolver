@@ -162,17 +162,11 @@ impl AvgNode {
 
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
 
-        // println!("{:?}", freqs);
-        // println!("{:?}", parent_words.iter().collect::<Vec<_>>());
-        // println!("{:?}", self.hint_ordering);
-
         let weights = self.hint_ordering.iter().map(|x| freqs[*x as usize] as f64);
         let entropies = (0..self.hint_ordering.len())
             .map(|i| {
                 let hint = self.hint_ordering[i] as usize;
                 let n_words = freqs[hint];
-
-                // println!("{} ", hint);
 
                 if n_words == 0 || hint == ALL_GREEN {
                     0.
@@ -186,9 +180,6 @@ impl AvgNode {
                     avg_turns(n_words)
                 }
             });
-
-        // println!("{:?}", weights.clone().collect::<Vec<_>>());
-        // println!("{:?}", entropies.clone().collect::<Vec<_>>());
 
         self.turns = weighted_average(weights, entropies);
     }

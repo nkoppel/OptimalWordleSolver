@@ -102,13 +102,6 @@ lazy_static! {
     pub static ref GUESS_MAP:    HashMap<String, usize> = get_word_map(GUESS_WORDS   .clone());
     pub static ref SOLUTION_MAP: HashMap<String, usize> = get_word_map(SOLUTION_WORDS.clone());
 
-    pub static ref GUESSES_IN_SOLUTIONS: HashSet<usize> = {
-        let gset = GUESS_WORDS   .iter().cloned().collect::<HashSet<_>>();
-        let sset = SOLUTION_WORDS.iter().cloned().collect::<HashSet<_>>();
-
-        gset.union(&sset).map(|g| GUESS_MAP[g]).collect()
-    };
-
     pub static ref TABLE: Vec<Vec<u8>> = get_hint_table(&SOLUTION_WORDS, &GUESS_WORDS);
 }
 

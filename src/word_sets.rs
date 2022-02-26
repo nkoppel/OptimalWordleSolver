@@ -81,7 +81,6 @@ impl BitSet {
         let mut vec = u64x4::splat(0);
 
         for i in (0..self.bits.len()).step_by(4) {
-            // cast to u64s to prevent overflows
             let vec2: u64x4 = u64x4::from_slice_unaligned(&self.bits[i..i+4]);
 
             vec += vec2.count_ones();
