@@ -3,6 +3,7 @@ use crate::word_sets::*;
 use crate::searchtree::*;
 
 use std::mem;
+use std::io::Write;
 
 fn is_complete(r: &Result<AvgNode, f64>) -> bool {
     if let Ok(node) = r {
@@ -13,71 +14,95 @@ fn is_complete(r: &Result<AvgNode, f64>) -> bool {
 }
 
 impl BestNode {
-    pub fn search(&mut self) {
-        let mut stack: Vec<(*mut BestNode, BitSet)> = Vec::new();
-        let mut words = BitSet::ones(SOLUTION_WORDS.len());
-        let mut ptr = self;
+    pub fn search(&mut self, words: BitSet) -> bool {
+        if is_complete(&self.branches[self.best_guess]) {
+            // descend
+            let guess = self.best_guess;
+            let avg = self.branches[guess].as_mut().unwrap();
+            let orig_branch = avg.next_branch;
 
-        // descend until we can create a new tree
-        while is_complete(&ptr.branches[ptr.best_guess]) {
-            stack.push((ptr as *mut BestNode, words.clone()));
+            let mut exit = false;
 
-            let guess = ptr.best_guess;
-            let avg = ptr.branches[guess].as_mut().unwrap();
-            let branch_idx = avg.next_branch;
+            loop {
+                let branch_idx = avg.next_branch;
 
-            avg.next_branch += 1;
-            avg.next_branch %= avg.branches.len();
+                if exit && branch_idx == orig_branch {
+                    return false;
+                }
+                exit = true;
 
-            print!("{} > {} > ", GUESS_WORDS[guess], hint_to_str(avg.hint_ordering[branch_idx]));
+                avg.next_branch += 1;
+                avg.next_branch %= avg.branches.len();
 
-            words &= &GUESS_HINT_TABLE[guess][avg.hint_ordering[branch_idx] as usize];
+                print!("{} > {} > ", GUESS_WORDS[guess], hint_to_str(avg.hint_ordering[branch_idx]));
 
-            if words.count_ones() <= 1 {
-                println!("EXIT");
-                return;
+                let new_words = words.clone() & &GUESS_HINT_TABLE[guess][avg.hint_ordering[branch_idx] as usize];
+
+                if new_words.count_ones() <= 1 {
+                    println!("EXIT");
+                    continue
+                }
+
+                if avg.branches[branch_idx].is_err() {
+                    avg.branches[branch_idx] = Ok(BestNode::new(&new_words));
+                }
+
+                if avg.branches[branch_idx].as_mut().unwrap().search(new_words) {
+                    break;
+                }
             }
 
-            if avg.branches[branch_idx].is_err() {
-                avg.branches[branch_idx] = Ok(BestNode::new(&words));
-            }
-
-            ptr = avg.branches[branch_idx].as_mut().unwrap();
-        }
-
-        stack.push((ptr as *mut BestNode, words.clone()));
-
-        // create a new tree
-        let guess = ptr.best_guess;
-
-        println!("{}", GUESS_WORDS[guess]);
-
-        if ptr.branches[guess].is_err() {
-            ptr.branches[guess] = Ok(AvgNode::new(guess, &words));
-        }
-
-        let avg = ptr.branches[guess].as_mut().unwrap();
-
-        if avg.hint_ordering.len() == 0 {
-            return;
-        }
-
-        // println!("{:?}", avg);
-        words &= &GUESS_HINT_TABLE[guess][avg.hint_ordering[avg.branches.len()] as usize];
-
-        avg.branches.push(Err(best_turns(&words).1));
-
-        mem::drop(ptr);
-
-        // propogate error upwards
-        for (ptr, words) in stack.into_iter().rev() {
-            let ptr = unsafe{ptr.as_mut()}.unwrap();
-
-            let guess = ptr.best_guess;
-            let avg = ptr.branches[guess].as_mut().unwrap();
-
+            // propogate new turn values
             avg.update_turns(guess, &words);
-            ptr.update_turns();
+            self.update_turns();
+            true
+        } else {
+            // create a new tree
+            let guess = self.best_guess;
+
+            println!("{}", GUESS_WORDS[guess]);
+
+            if self.branches[guess].is_err() {
+                self.branches[guess] = Ok(AvgNode::new(guess, &words));
+            }
+
+            let avg = self.branches[guess].as_mut().unwrap();
+
+            if avg.hint_ordering.len() == 0 {
+                return false;
+            }
+
+            let new_words =
+                words.clone() &
+                &GUESS_HINT_TABLE[guess][avg.hint_ordering[avg.branches.len()] as usize];
+
+            avg.branches.push(Err(best_turns(&new_words).1));
+
+            // propogate new turn values
+            avg.update_turns(guess, &words);
+            self.update_turns();
+
+            true
+        }
+    }
+
+    pub fn write_strategy<W: Write>(&self, words: BitSet, prefix: &str, w: &mut W) {
+        let guess = self.best_guess;
+        let avg = self.branches[guess].as_ref().unwrap();
+
+        for i in 0..avg.branches.len() {
+            let hint = avg.hint_ordering[i];
+            let prefix = format!("{}{} {} ", prefix, GUESS_WORDS[guess], hint_to_str(hint));
+
+            let new_words = words.clone() & &GUESS_HINT_TABLE[guess][hint as usize];
+
+            if let Ok(branch) = &avg.branches[i] {
+                branch.write_strategy(new_words, &prefix, w);
+            } else if hint as usize != ALL_GREEN {
+                writeln!(w, "{}{} ggggg", prefix, SOLUTION_WORDS[new_words.iter().next().unwrap()]).unwrap();
+            } else {
+                writeln!(w, "{}", prefix.trim()).unwrap();
+            }
         }
     }
 }

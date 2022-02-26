@@ -5,7 +5,7 @@ use std::cell::RefCell;
 
 // represents the hint which indicates that the correct
 // word has been guessed and the game is over
-const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
+pub const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
 
 pub fn avg_turns(words: usize) -> f64 {
     let mut words = words as f64;
@@ -163,6 +163,7 @@ impl AvgNode {
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
 
         // println!("{:?}", freqs);
+        // println!("{:?}", parent_words.iter().collect::<Vec<_>>());
         // println!("{:?}", self.hint_ordering);
 
         let weights = self.hint_ordering.iter().map(|x| freqs[*x as usize] as f64);
@@ -170,6 +171,8 @@ impl AvgNode {
             .map(|i| {
                 let hint = self.hint_ordering[i] as usize;
                 let n_words = freqs[hint];
+
+                // println!("{} ", hint);
 
                 if n_words == 0 || hint == ALL_GREEN {
                     0.
@@ -183,6 +186,9 @@ impl AvgNode {
                     avg_turns(n_words)
                 }
             });
+
+        // println!("{:?}", weights.clone().collect::<Vec<_>>());
+        // println!("{:?}", entropies.clone().collect::<Vec<_>>());
 
         self.turns = weighted_average(weights, entropies);
     }
