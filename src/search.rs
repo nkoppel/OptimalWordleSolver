@@ -14,7 +14,7 @@ fn is_complete(r: &Result<AvgNode, f64>) -> bool {
 }
 
 impl BestNode {
-    pub fn search(&mut self, words: BitSet) -> bool {
+    pub fn search(&mut self, words: WordSet) -> bool {
         if is_complete(&self.branches[self.best_guess]) {
             // descend
             let guess = self.best_guess;
@@ -27,6 +27,7 @@ impl BestNode {
                 let branch_idx = avg.next_branch;
 
                 if exit && branch_idx == orig_branch {
+                    self.complete = true;
                     return false;
                 }
                 exit = true;
@@ -36,9 +37,14 @@ impl BestNode {
 
                 print!("{} > {} > ", GUESS_WORDS[guess], hint_to_str(avg.hint_ordering[branch_idx]));
 
-                let new_words = words.clone() & &GUESS_HINT_TABLE[guess][avg.hint_ordering[branch_idx] as usize];
+                if let Ok(BestNode{complete: true, ..}) = avg.branches[branch_idx] {
+                    println!("EXIT");
+                    continue
+                }
 
-                if new_words.count_ones() <= 1 {
+                let new_words = words.clone().reduce(guess, avg.hint_ordering[branch_idx]);
+
+                if new_words.len() <= 1 {
                     println!("EXIT");
                     continue
                 }
@@ -72,9 +78,7 @@ impl BestNode {
                 return false;
             }
 
-            let new_words =
-                words.clone() &
-                &GUESS_HINT_TABLE[guess][avg.hint_ordering[avg.branches.len()] as usize];
+            let new_words = words.clone().reduce(guess, avg.hint_ordering[avg.branches.len()]);
 
             avg.branches.push(Err(best_turns(&new_words).1));
 
@@ -86,7 +90,7 @@ impl BestNode {
         }
     }
 
-    pub fn write_strategy<W: Write>(&self, words: BitSet, prefix: &str, w: &mut W) {
+    pub fn write_strategy<W: Write>(&self, words: WordSet, prefix: &str, w: &mut W) {
         let guess = self.best_guess;
         let avg = self.branches[guess].as_ref().unwrap();
 
@@ -94,7 +98,7 @@ impl BestNode {
             let hint = avg.hint_ordering[i];
             let prefix = format!("{}{} {} ", prefix, GUESS_WORDS[guess], hint_to_str(hint));
 
-            let new_words = words.clone() & &GUESS_HINT_TABLE[guess][hint as usize];
+            let new_words = words.clone().reduce(guess, hint);
 
             if let Ok(branch) = &avg.branches[i] {
                 branch.write_strategy(new_words, &prefix, w);

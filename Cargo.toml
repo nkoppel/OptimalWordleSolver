@@ -8,4 +8,3 @@ edition = "2021"
 [dependencies]
 
 lazy_static = "1.4"
-packed_simd = { version = "0.3", package = "packed_simd_2", features = ["into_bits"]}

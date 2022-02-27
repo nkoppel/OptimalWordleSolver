@@ -16,7 +16,7 @@ use searchtree::*;
 use std::fs::File;
 
 fn main() {
-    let words = BitSet::ones(SOLUTION_WORDS.len());
+    let words = WordSet::all(SOLUTION_WORDS.len());
 
     let mut tree = BestNode::new(&words);
 
@@ -27,6 +27,6 @@ fn main() {
         }
     }
 
-    tree.write_strategy(words.clone(), "", &mut File::create("full_solution.txt").unwrap());
+    tree.write_strategy(words.clone(), "", &mut File::create("2309_solution_2.txt").unwrap());
     println!("{}", tree.turns);
 }

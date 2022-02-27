@@ -3,6 +3,8 @@ use crate::word_sets::*;
 
 use std::cell::RefCell;
 
+pub const HINT_POSSIBILITIES: usize = 243;
+
 // represents the hint which indicates that the correct
 // word has been guessed and the game is over
 pub const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
@@ -98,7 +100,7 @@ fn loc_of_min<I, T>(iter: I) -> Option<(usize, T)>
         })
 }
 
-pub fn best_turns(words: &BitSet) -> (usize, f64) {
+pub fn best_turns(words: &WordSet) -> (usize, f64) {
     let words = words.iter().collect::<Vec<_>>();
 
     loc_of_min (
@@ -112,6 +114,7 @@ pub fn best_turns(words: &BitSet) -> (usize, f64) {
 pub struct BestNode {
     pub(crate) best_guess: usize,
     pub(crate) turns: f64,
+    pub(crate) complete: bool,
 
     pub(crate) branches: Vec<Result<AvgNode, f64>>
 }
@@ -126,7 +129,7 @@ pub struct AvgNode {
 }
 
 impl AvgNode {
-    pub fn new(guess: usize, parent_words: &BitSet) -> Self {
+    pub fn new(guess: usize, parent_words: &WordSet) -> Self {
         let mut out =
             Self {
                 turns: 0.,
@@ -157,7 +160,7 @@ impl AvgNode {
         out
     }
 
-    pub fn update_turns(&mut self, guess: usize, parent_words: &BitSet) {
+    pub fn update_turns(&mut self, guess: usize, parent_words: &WordSet) {
         let mut freqs = vec![0; HINT_POSSIBILITIES];
 
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
@@ -200,11 +203,12 @@ impl BestNode {
         self.turns = *min + 1.;
     }
 
-    pub fn new(words: &BitSet) -> Self {
+    pub fn new(words: &WordSet) -> Self {
         let mut out =
             Self {
                 best_guess: 0,
                 turns: 0.,
+                complete: false,
                 branches: vec![Err(0.); GUESS_WORDS.len()],
             };
 

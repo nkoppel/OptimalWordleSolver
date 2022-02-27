@@ -1,4 +1,4 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 
 pub fn read_words(filename: &str) -> Vec<String> {
     use std::fs::File;
@@ -50,7 +50,7 @@ pub fn get_word_map(words: Vec<String>) -> HashMap<String, usize> {
     out
 }
 
-pub fn get_hint_table<T: AsRef<[u8]>>(solutions: &[T], guesses: &[T]) -> Vec<Vec<u8>> {
+pub fn gen_hint_table<T: AsRef<[u8]>>(solutions: &[T], guesses: &[T]) -> Vec<Vec<u8>> {
     let mut out = vec![vec![0; solutions.len()]; guesses.len()];
 
     for i in 0..guesses.len() {
@@ -95,14 +95,16 @@ pub fn hint_to_str(mut hint: u8) -> String {
 }
 
 lazy_static! {
-    pub static ref GUESS_WORDS   : Vec<String> = read_words("guess_words.txt"   );
-    // pub static ref GUESS_WORDS   : Vec<String> = read_words("solution_words.txt");
+    // pub static ref GUESS_WORDS   : Vec<String> = read_words("guess_words.txt"   );
+    pub static ref GUESS_WORDS   : Vec<String> = read_words("solution_words.txt");
     pub static ref SOLUTION_WORDS: Vec<String> = read_words("solution_words.txt");
 
     pub static ref GUESS_MAP:    HashMap<String, usize> = get_word_map(GUESS_WORDS   .clone());
     pub static ref SOLUTION_MAP: HashMap<String, usize> = get_word_map(SOLUTION_WORDS.clone());
 
-    pub static ref TABLE: Vec<Vec<u8>> = get_hint_table(&SOLUTION_WORDS, &GUESS_WORDS);
+    // gives the hint corresponding to a word and a guess when indexed by the guess, then by the
+    // word
+    pub static ref TABLE: Vec<Vec<u8>> = gen_hint_table(&SOLUTION_WORDS, &GUESS_WORDS);
 }
 
 extern crate test;
