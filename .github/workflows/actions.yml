@@ -1,0 +1,25 @@
+name: Actions
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  deploy-web:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Push build in www directory to nkoppel.github.io
+      uses: nkoppel/push-files-to-another-repository@v1.1.0
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-files: 'web/*'
+        destination-directory: 'wordle'
+        destination-username: 'nkoppel'
+        destination-repository: 'nkoppel.github.io'
+        commit-email: 'nathankoppel0@gmail.com'
