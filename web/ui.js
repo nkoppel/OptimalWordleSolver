@@ -154,9 +154,12 @@ document.addEventListener("keydown",  function (e) {
     }
 })
 
-d3.select("#green-key" ).node().addEventListener("click", e => addToHints("g"))
-d3.select("#yellow-key").node().addEventListener("click", e => addToHints("y"))
-d3.select("#grey-key"  ).node().addEventListener("click", e => addToHints("_"))
+mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
-d3.select("#delete-key").node().addEventListener("click", e => deleteFromHints())
-d3.select("#clear-key" ).node().addEventListener("click", e => resetHints())
+event_type = mobile ? "touchstart" : "click"
+
+d3.select("#green-key" ).node().addEventListener(event_type, e => addToHints("g"))
+d3.select("#yellow-key").node().addEventListener(event_type, e => addToHints("y"))
+d3.select("#grey-key"  ).node().addEventListener(event_type, e => addToHints("_"))
+d3.select("#delete-key").node().addEventListener(event_type, e => deleteFromHints())
+d3.select("#clear-key" ).node().addEventListener(event_type, e => resetHints())
