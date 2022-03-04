@@ -73,7 +73,7 @@ impl BestNode {
 
             let avg = self.branches[guess].as_mut().unwrap();
 
-            if avg.hint_ordering.len() == 0 {
+            if avg.hint_ordering.is_empty() {
                 return false;
             }
 
