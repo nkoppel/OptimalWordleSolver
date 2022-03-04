@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     </head>
     <body>
-        <div id="wrapper">
+        <div class="wrapper">
             <!-- <div id="histograms"> -->
                 <!-- <div id="turn-histogram"></div> -->
                 <!-- <div id="hint-histogram"></div> -->
@@ -18,29 +18,31 @@
         <br>
         <br>
 
-        <div id="keyboard" style="display: none">
-            <div id="green-key"  class="green-tile  key" title="Green tile">G</div>
-            <div id="yellow-key" class="yellow-tile key" title="Yellow tile">Y</div>
-            <div id="grey-key"   class="grey-tile   key" title="Grey tile (B or space)">B</div>
-            <div id="delete-key" class="key" style="position:relative" title="Backspace">
-                <div style="position:absolute;top:0px">
-                    <svg width="70" height="70">
-                        <polygon points="60,10 10,35, 60 60" style="stroke:#e64239;fill:#e64239;stroke-width:5"></polygon>
-                    </svg>
+        <div id="keyboard-wrapper">
+            <div id="keyboard" style="display: none">
+                <div id="green-key"  class="green-tile  key" title="Green tile">G</div>
+                <div id="yellow-key" class="yellow-tile key" title="Yellow tile">Y</div>
+                <div id="grey-key"   class="grey-tile   key" title="Grey tile (B or space)">B</div>
+                <div id="delete-key" class="key" style="position:relative" title="Backspace">
+                    <div style="position:absolute;top:0px">
+                        <svg width="70" height="70">
+                            <polygon points="60,10 10,35, 60 60" style="stroke:#e64239;fill:#e64239;stroke-width:5"></polygon>
+                        </svg>
+                    </div>
+                    <div class="key" style="position:absolute;background-color:transparent"></div>
                 </div>
-                <div class="key" style="position:absolute;background-color:transparent"></div>
-            </div>
-            <div id="clear-key"  class="key" style="position:relative" title="Clear board (Escape)">
-                <div style="position:absolute;top:0px">
-                    <svg width="70" height="70">
-                        <rect width="100%" height="100%" fill="#e64239"/>
-                        <line x1="0" y1="0" x2="70" y2="70" 
-                        style="stroke:rgb(255,255,255);stroke-width:6"/>
-                        <line x1="0" y1="70" x2="70" y2="0" 
-                        style="stroke:rgb(255,255,255);stroke-width:6"/>
-                    </svg>
+                <div id="clear-key"  class="key" style="position:relative" title="Clear board (Escape)">
+                    <div style="position:absolute;top:0px">
+                        <svg width="70" height="70">
+                            <rect width="100%" height="100%" fill="#e64239"/>
+                            <line x1="0" y1="0" x2="70" y2="70" 
+                            style="stroke:rgb(255,255,255);stroke-width:6"/>
+                            <line x1="0" y1="70" x2="70" y2="0" 
+                            style="stroke:rgb(255,255,255);stroke-width:6"/>
+                        </svg>
+                    </div>
+                    <div class="key" style="position:absolute;background-color:transparent"></div>
                 </div>
-                <div class="key" style="position:absolute;background-color:transparent"></div>
             </div>
         </div>
 

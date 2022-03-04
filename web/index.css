@@ -2,9 +2,16 @@
     display: flex;
 }
 
+#keyboard-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 #keyboard {
     display: flex;
     justify-content: center;
+    display: none;
+    width: 440px;
 }
 
 /* #hint-histogram { */
