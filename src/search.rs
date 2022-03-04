@@ -2,7 +2,6 @@ use crate::words::*;
 use crate::word_sets::*;
 use crate::searchtree::*;
 
-use std::mem;
 use std::io::Write;
 
 fn is_complete(r: &Result<AvgNode, f64>) -> bool {

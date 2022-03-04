@@ -37,7 +37,7 @@ fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut Vec<usize>, words: I, g
     }
 }
 
-fn weighted_average<I, J>(weights: I, nums: J) -> f64
+pub fn weighted_average<I, J>(weights: I, nums: J) -> f64
     where I: Iterator<Item=f64>, J: Iterator<Item=f64>
 {
     let mut out = 0.;
