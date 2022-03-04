@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Push build in www directory to nkoppel.github.io
-      uses: nkoppel/push-files-to-another-repository@v1.1.0
+      uses: nkoppel/push-files-to-another-repository@v1.1.1
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
