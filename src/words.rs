@@ -28,8 +28,11 @@ fn get_hint<T: AsRef<[u8]>>(guess: T, answer: T) -> u8 {
         if *c == answer[i] {
             out += 2;
         } else if answer.contains(c) {
-            let g_count = guess[0..i].iter().filter(|x| *x == c).count();
-            let a_count = answer     .iter().filter(|x| *x == c).count();
+            let g_count =
+                guess[0..i].iter().filter(|x| *x == c).count() +
+                (i..guess.len()).filter(|i| guess[*i] == answer[*i] && guess[*i] == *c).count();
+
+            let a_count = answer.iter().filter(|x| *x == c).count();
 
             if g_count < a_count {
                 out += 1;
@@ -115,8 +118,9 @@ fn t_get_hint() {
     assert_eq!(get_hint("bbaba", "bcbcc"), hint_from_str("gy___"));
     assert_eq!(get_hint("eagle", "reads"), hint_from_str("yy___"));
     assert_eq!(get_hint("perch", "bench"), hint_from_str("_g_gg"));
+    assert_eq!(get_hint("treat", "moist"), hint_from_str("____g"));
 
-    assert_eq!("bgbgg".to_string(), hint_to_str(hint_from_str("bgbgg")));
+    assert_eq!("_g_gg".to_string(), hint_to_str(hint_from_str("bgbgg")));
     assert_eq!(128, hint_from_str(&hint_to_str(128)));
 }
 
