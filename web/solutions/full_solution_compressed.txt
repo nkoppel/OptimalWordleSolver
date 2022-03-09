@@ -24,9 +24,9 @@
 4 
 3 _y__g unify
 3 _yy__ unzip
+3 _g_g_ humph
+3 _g_gg jumpy
 3 _gy_g puffy
-3 _gyg_ humph
-3 _gygg jumpy
 3 _gggg puppy
 3 yg___ fungi
 3 yg__g buggy
@@ -56,13 +56,13 @@
 3 ggy__ bongo
 3 ggg_g booby
 3 
-2 _y___ owing y__g_ phony
-3 y_y__ hippo
-3 y_yy_ inbox
-3 y_yyy bingo
-3 yy___ whoop
-3 yy_y_ known
-3 g_gy_ onion
+2 _y___ whoop ___g_ inbox
+3 __y__ bingo
+3 __yg_ onion
+3 _yy_y hippo
+3 _gg_y phony
+3 y_y__ owing
+3 y_g__ known
 3 
 2 _g__y howdy _g_gg moody _gggg goody
 4 
@@ -94,8 +94,8 @@
 3 _gg__ mimic
 3 gy___ which
 3 gg___ winch
-2 ____y giddy _gy_g dizzy
-3 _gygg windy
+2 ____y giddy _g_gg windy
+3 _gy_g dizzy
 3 _gggg biddy
 3 yyy_y dying
 3 ygy_g dingy
@@ -122,10 +122,10 @@
 3 _gyyy buxom
 3 _gggg gumbo
 3 
-2 _yyy_ rumor yg_gg juror _gggg furor
-4 
-3 yy_y_ group
-3 ygggg humor
+2 _yyy_ juror _yyy_ group
+3 _g_gg humor
+3 _gygg rumor
+3 _gggg furor
 3 
 2 gy_y_ zincy ___y_ crook
 3 ___g_ crock
@@ -140,7 +140,7 @@
 3 gg_gg comic
 3 ggg_y conch
 3 
-2 __yg_ hurry _gyg_ quirk
+2 __yg_ hurry _g_g_ quirk
 3 _gggg furry
 3 
 2 _y__y widow _yyg_ idiom
@@ -157,7 +157,7 @@
 3 
 2 ___yg rigid yyy_g grind
 3 
-2 __y_g undid y_ygg humid
+2 __y_g undid y__gg humid
 3 
 2 __yy_ rugby yg__g murky
 3 
@@ -231,7 +231,7 @@
 3 _gg_y hinge
 3 _ggg_ mince
 3 gggg_ wince
-2 _y__y pubic _____ merry _yygg every
+2 _y__y pubic _____ merry _y_gg every
 4 _gg_g jerky
 4 _gggg ferry
 4 
@@ -252,15 +252,15 @@
 3 _gy__ pixie
 3 _gyg_ pique
 3 _gg__ piece
-2 _y__g vughy _____ eerie
-3 ___y_ where
-3 ___yy rhyme
-3 __y__ merge
-3 _gy__ purge
-3 yy___ revue
-3 yg___ curve
-3 g____ verve
-3 g_y__ verge
+2 _y__g verge __y_g rhyme
+3 __ggg purge
+3 _yy_g where
+3 _gg_g eerie
+3 _gggg merge
+3 y_g_g curve
+3 ygy_g revue
+3 ggg_g verve
+3 
 2 _g__g campi ____y bribe
 3 ___yy prize
 3 ___gy gripe
@@ -292,10 +292,10 @@
 3 _g_y_ geeky
 3 
 2 _yy_g gorge _yy_g ombre
+3 _gygg rouge
 3 _gg_g force
+3 _gggg forge
 3 ygy_g rogue
-3 ygygg rouge
-3 ygggg forge
 3 
 2 _gg_g prove _gg_g froze _gg_g broke
 4 
@@ -308,9 +308,9 @@
 3 ygy_g movie
 3 gg__g vogue
 3 
-2 ___gy penny _yyg_ eking
-3 _yygy eying
-3 _gyg_ being
+2 ___gy penny _y_g_ eking
+3 _y_gy eying
+3 _g_g_ being
 3 
 2 __g_g zymic _____ evoke
 3 ____y choke
@@ -385,7 +385,7 @@
 1 ___g_ rownd y____ pubic ___y_ grief _yygy fixer
 4 gyyg_ giver
 4 
-3 _____ freer gyygg fever
+3 _____ freer g_ygg fever
 4 
 3 ____y creek gygg_ cheer
 4 
@@ -428,10 +428,10 @@
 3 _gygg nicer
 3 _gggg finer
 3 
-2 y___y drier yy_gg udder
-3 yyygg cider
-3 gy_gg defer
-3 gyygg diver
+2 y___y drier y__gg udder
+3 y_ygg cider
+3 g__gg defer
+3 g_ygg diver
 3 gg_gg dryer
 3 
 2 ___y_ zingy __y__ queen
@@ -439,9 +439,9 @@
 3 _gy__ vixen
 3 _gyy_ given
 3 _gg_g piney
-2 _____ chief y__g_ emcee
-3 y_yg_ bicep
-3 gg_g_ cheek
+2 _____ emcee __yg_ chief
+3 __gg_ bicep
+3 y_yg_ cheek
 3 
 2 _g_y_ womby _g___ coven
 3 _g__g honey
@@ -465,7 +465,7 @@
 3 
 2 y__yy under _yygg diner
 3 
-2 yy__y order gyggg odder
+2 yy__y order g_ggg odder
 3 
 2 g___y ruder g_ggg rider
 3 
@@ -601,7 +601,7 @@
 3 
 2 g____ knoll ___y_ climb ggg__ cliff
 4 
-3 ___yg civil
+3 ____g civil
 3 ___g_ chili
 3 ___gg chill
 3 _y_y_ cling
@@ -640,7 +640,7 @@
 3 gg_gg lipid
 3 
 2 __y__ quill _g_y_ lumpy
-3 _gyyg pupil
+3 _gy_g pupil
 3 
 2 _y__g flood _gg_g blond
 3 _gggg blood
@@ -656,7 +656,7 @@
 3 
 2 _y_yy drool ggg_g droll
 3 
-2 y____ icily yygy_ flick
+2 y____ icily _ygy_ flick
 3 
 2 y_y__ lunch gg_y_ lucky
 3 
@@ -688,7 +688,7 @@
 2 gyy_g cloud
 2 gg___ coyly
 2 ggg_g could
-1 ____y north ___yg wiped _____ hutch ygggg butch
+1 ____y north ___yg wiped _____ hutch _gggg butch
 4 
 3 ____y dutch
 3 _y___ thigh
@@ -739,7 +739,7 @@
 3 
 2 _ygyy throw gggg_ throb
 3 
-2 _gyy_ rotor ygggg motor
+2 _gyy_ rotor _gggg motor
 3 
 2 _gggg worth _gggg forth
 3 
@@ -782,14 +782,14 @@
 3 yy___ quake
 3 yy__y awake
 3 gyy__ knave
-2 _ygy_ cezve _y__g grape _gg_g frame
+2 _ygy_ cezve ____g grape _gg_g frame
 4 
-3 _y_gg grave
-3 _yy_g graze
-3 yy__g grace
-3 gy__g crane
-3 gy_gg crave
-3 gyy_g craze
+3 ___gg grave
+3 __y_g graze
+3 y___g grace
+3 g___g crane
+3 g__gg crave
+3 g_y_g craze
 2 _yy__ omega __g_y cheap
 3 __g_g hyena
 3 _yy_y anime
@@ -829,7 +829,7 @@
 2 gygy_ zacks _y___ brave
 3 _y_g_ brake
 3 _yy__ brace
-2 _yg_y evade y_gyg adage
+2 _yg_y evade __gyg adage
 3 
 2 _gy_y media _gy_y decay
 3 
@@ -868,11 +868,11 @@
 3 g_g_g paddy
 2 _____ mamma _g___ vapid
 3 _g__g kappa
-3 ygggg gamma
+3 _gggg gamma
 3 gg__g mafia
+3 gg_gg magma
 3 ggy__ maxim
 3 ggy_y madam
-3 ggygg magma
 3 
 2 __y__ rapid gg___ rajah
 3 gg__y radar
@@ -885,11 +885,11 @@
 3 _y_y_ hardy
 3 _y_yy harpy
 3 _y_g_ harry
-2 _yy__ vroom _yy__ radio
-3 _yyg_ razor
-3 _yygy major
-3 yyyg_ favor
-3 gyyg_ vapor
+2 _yy__ vroom _y_g_ razor
+3 _y_gy major
+3 _yy__ radio
+3 yy_g_ favor
+3 gy_g_ vapor
 2 ___y_ pagan _g_yy mania
 3 _gyyy manga
 3 
@@ -902,7 +902,7 @@
 2 _y_y_ wagon _g_yy banjo
 3 _gyyy mango
 3 
-2 ___gg nanny ygggg fanny
+2 ___gg nanny _gggg fanny
 3 
 2 __g__ parka _ggyg karma
 3 
@@ -977,13 +977,13 @@
 2 __y__ drawl _yg_y alarm
 3 _gggg brawl
 3 
-2 yg___ vocal _gggg local ygggg focal
+2 yg___ vocal _gggg local _gggg focal
 4 
 3 
 2 g____ clamp gyg__ chalk
 3 ggg__ clack
 3 
-2 __g__ rural ygggg mural
+2 __g__ rural _gggg mural
 3 
 2 y____ flack _gggg black
 3 
@@ -1061,57 +1061,57 @@
 2 yy__y spunk
 2 yy_y_ suing
 2 yyy_y spurn
-1 ___yy trice y___y petty _gygg hefty
-3 _gg__ detox
-3 _gggg jetty
-3 yyygg empty
-3 ygyg_ depth
-3 
-2 yy__y retry yyggg entry
-3 ygy__ berth
-3 yggg_ metro
+1 ___yy trite yy__y retry _yggg entry
+3 _ggg_ metro
+3 ggg__ retch
 3 gggg_ retro
 3 
-2 g___y zygon _____ teeth
-3 ____y tenth
-3 ___y_ tempo
-3 _y___ teddy
-2 y___g quote _y_yg etude
-3 _g_gg butte
+2 ___gy hefty _y_gg empty
+3 yg_g_ depth
 3 
-2 y_g_g unite __ggg white
+2 __ggg unite __ggg white
 3 y_ggg quite
 3 
-2 ggg_g upbye ____g trite
-3 __y_g tribe
-3 _y__g tripe
-2 y_y_y piety _yyy_ fetid
+2 gg__g trove gg__g truce
+3 ggg_g trope
 3 
-2 yy__g route yg_gg forte
+2 ggg_g zebec _y___ tripe
+3 _y__y trice
+3 _yy__ tribe
+2 ___gg quote _y_gg chute
 3 
-2 yg__g wrote _g_gg brute
+2 _y_gg route yg_gg forte
+3 
+2 _g_gg wrote _g_gg brute
+3 
+2 y___y fetch _gg__ detox
+3 
+2 y__gy petty _gggg jetty
+3 
+2 y_y_y fetid _yyg_ ethic
+3 
+2 y_y_g untie y_ggg cutie
+3 
+2 g___y tempo gg___ teddy
 3 
 2 g___g thyme gg_gg theme
 3 
-2 gg__g trove ggg_g trope
+2 g__gy tenth gg_gg teeth
 3 
-2 y__yg chute
-2 y__gy fetch
-2 y_y_g untie
-2 y_yyy ethic
-2 y_yyg cutie
-2 y_g_y deity
-2 yy_gy retch
-2 ygg_g write
+2 g_g_g twine ggg_g twice
+3 
+2 __ygy piety
+2 __ggy deity
+2 _y_gy berth
+2 _gggg write
+2 y___g etude
+2 y__gg butte
 2 g_y_y tepid
-2 g_y_g tithe
-2 g_g_g twine
-2 g_ggg twice
+2 g_yyg tithe
 2 gy__y tenor
 2 gy__g there
 2 gyy_y their
 2 gg__y trend
-2 gg_gg truce
 2 
 1 __yy_ doing _____ clump _y___ leery
 3 _y__y reply
@@ -1130,7 +1130,7 @@
 3 ygyy_ bloke
 3 gg_y_ elope
 3 
-2 ____y leggy yyygg elegy
+2 ____y leggy yy_gg elegy
 3 yyg__ bugle
 3 
 2 __y__ rifle _g_gg bible
@@ -1162,18 +1162,18 @@
 2 yg__y lodge
 2 g____ dwell
 2 g_y__ devil
-1 _yyy_ gnarl __g_y fehme _y__g blaze _gg_g place
+1 _yyy_ gnarl __g_y fehme ____g blaze _gg_g place
 4 ggg_g blade
 4 
-3 _y_gg blame
-3 _yy_g whale
+3 ___gg blame
+3 __y_g whale
 3 _g___ leaky
 3 _g__g leave
 3 _g_y_ mealy
 3 _gy__ leach
 3 yg___ leafy
-3 gy__g flake
-3 gy_gg flame
+3 g___g flake
+3 g__gg flame
 2 __y_y spike ____g amble
 3 ___yy bleak
 3 __g_g alive
@@ -1296,10 +1296,10 @@
 2 gg_g_ mushy
 2 ggy__ music
 2 ggg__ mucus
-1 y__y_ rhone __y_g posse _yygg obese
-3 _gygg mouse
-3 ygygg copse
-3 ggygg poise
+1 y__y_ rhone __y_g posse _y_gg obese
+3 _g_gg mouse
+3 yg_gg copse
+3 gg_gg poise
 3 
 2 ____g issue _y__g geese
 3 yy_yg guise
@@ -1334,7 +1334,7 @@
 2 g__yy resin
 2 g__yg rinse
 2 g_y_g rouse
-1 ____g groin y__y_ wormy _____ tight ygggg fight
+1 ____g groin y__y_ wormy _____ tight _gggg fight
 4 
 3 ___y_ might
 3 g____ wight
@@ -1371,12 +1371,12 @@
 2 yy_y_ right
 2 gg__y grunt
 2 ggg__ grout
-1 g__y_ prink _y___ teuch _y___ swore
-3 _y__y shore
-3 _y_y_ score
-3 _yy__ surge
-3 _g___ serve
-3 _gy__ serum
+1 g__y_ prink _y___ where ___yg surge
+3 ___gg score
+3 __yy_ serum
+3 __yyg serve
+3 _g_gg shore
+3 y__gg swore
 2 _____ shove g___y seedy
 3 g___g segue
 3 
@@ -1458,7 +1458,7 @@
 3 
 2 ____g tango yg__g ratio
 3 
-2 g____ patty ggygg party
+2 g____ patty gg_gg party
 3 
 2 __y__ batty
 2 __y_y baton
@@ -1522,30 +1522,30 @@
 2 _yyy_ stink
 2 y____ stump
 2 yy___ strip
-1 ___gy mohur ____g inter __ggg deter
-3 _gggg enter
-3 y_ygg tiger
+1 ___gy tutor __g_g meter __ggg inter
+3 _yggg enter
+3 _gggg deter
 3 
-2 ___yg tuber yy_gg utter
-3 gy_gg truer
+2 g____ tweed g__g_ thief
+3 g_yg_ tepee
 3 
-2 _____ tweed g_yg_ tepee
+2 g___y threw g_yg_ tried
+3 gggg_ three
 3 
-2 __y_y threw gggg_ three
+2 g___g timer gg_gg tiger
 3 
-2 _g__g voter _gygg tower
-3 
-2 ____y tried
-2 __y__ thief
-2 __g_g ether
-2 _y___ often
-2 _y__g otter
-2 _y_yg outer
-2 _yg_g other
-2 _g___ token
-2 y___g timer
-2 yg___ totem
-2 g___g meter
+2 __gy_ often
+2 __gyg voter
+2 _ggyg outer
+2 y___g ether
+2 y__yg other
+2 y_gyg otter
+2 yyg_g utter
+2 g__y_ token
+2 g__yg tower
+2 g_gy_ totem
+2 gy__g truer
+2 gg__g tuber
 1 _g_g_ gormy __y__ caper _g_gg waver _g_gg baker
 4 gg_gg wafer
 4 
@@ -1557,7 +1557,7 @@
 3 
 2 __yy_ ramen ygyg_ maker
 3 
-2 __g__ rarer ygggg parer
+2 __g__ rarer _gggg parer
 3 
 2 y_y__ wager _gggg eager
 3 
@@ -1594,11 +1594,11 @@
 2 yy___ spool
 2 yyy__ spoil
 2 yyg__ spill
-1 g__g_ thrip __y__ yewen _y_g_ sober
-3 _y_gy sneer
-3 _ygg_ sower
-3 _g_g_ sever
-3 _ggg_ sewer
+1 g__g_ thrip __y__ sewer g__gg sober
+3 g_ggg sower
+3 gy_gg sneer
+3 gg_gg sever
+3 
 2 __g__ screw g_gg_ surer
 3 gggg_ scree
 3 
@@ -1617,7 +1617,7 @@
 2 _g_y_ shied
 2 _gy__ sheer
 2 _gg__ shrew
-1 ___yg runic _____ theft y_y_g depot
+1 ___yg runic _____ theft __y_g depot
 3 
 2 ___yy evict g_ggg edict
 3 
@@ -1625,7 +1625,7 @@
 3 
 2 y____ overt __ggg exert
 3 
-2 y___y erect yggyg crept
+2 y___y erect _ggyg crept
 3 
 2 g__g_ remit gg_gg refit
 3 
@@ -1686,7 +1686,7 @@
 3 
 2 _____ giant _yg_g await
 3 
-2 ____y afoot g_ygg abbot
+2 ____y afoot g__gg abbot
 3 
 2 ___y_ admit gg__g adapt
 3 
@@ -1702,9 +1702,9 @@
 2 gy___ chart
 2 gg___ craft
 1 _y_yy trace y_g_y heath _ggg_ meaty
-3 ygggg death
+3 _gggg death
 3 
-2 y_g_g agate y_ggg ovate
+2 y_g_g agate __ggg ovate
 3 g_ggg abate
 3 
 2 ygg_g irate _gggg grate
@@ -1743,7 +1743,7 @@
 2 g__yy twist
 1 g___g churn ___g_ sport g__gg skirt
 3 
-2 __y__ stout gyggg spout
+2 __y__ stout g_ggg spout
 3 
 2 _g___ shoot gg__g shift
 3 
@@ -1912,42 +1912,42 @@
 2 _gy__ treat
 2 _gy_y great
 2 g_y__ wheat
-1 gyy__ ghyll ___y_ slain ggg__ slack
+1 gyy__ ghyll ____g snarl ggg_g snail
 3 
-2 ___yg snarl ggg_g snail
+2 ___y_ slain ggg__ slack
 3 
 2 ___g_ scalp gggg_ scald
 3 
-2 _g_yg shoal gg_yg shawl
+2 _g__g shoal gg_yg shawl
 3 
 2 ___gg small
 2 __yg_ scaly
 2 _y_y_ slash
 2 _g_gg shall
 2 y__y_ slang
-1 yy_y_ cuish ___g_ erase y_ggg abase
-3 ygygg arose
+1 yy_y_ erase __ggg phase __ggg abase
+3 _gggg chase
 3 
-2 _y_g_ amuse g_ggg abuse
+2 __ygg amuse g_ggg abuse
 3 
-2 ___y_ essay
-2 ___gy phase
-2 __gy_ aside
-2 __gg_ arise
-2 _y_y_ usage
-2 g__g_ cease
-2 g__gy chase
-1 _yg__ polly ggg__ polka ggg_y polar
+2 _gygg arose gg_gg arise
 3 
-2 __g_y bylaw
-2 __g_g inlay
-2 __gy_ lilac
-2 __gyg allay
-2 __gg_ villa
-2 _yg__ aglow
-2 _ygy_ allow
-2 _ygyg alloy
-2 _gg__ molar
+2 __yyg aside
+2 __gyg usage
+2 y_ggg cease
+2 g_yy_ essay
+2 
+1 _yg__ allay __gg_ polar _gggg molar
+3 
+2 __ggy bylaw
+2 __ggg inlay
+2 _ygg_ lilac
+2 y_g__ polka
+2 yyg__ villa
+2 g_g__ aglow
+2 ggg__ allow
+2 ggg_g alloy
+2 
 1 _gyg_ nymph _____ lager ygyg_ gavel
 3 yggg_ bagel
 3 gg_g_ label
@@ -1970,16 +1970,16 @@
 2 _yy__ stern
 2 y___g setup
 2 y__y_ suite
-1 _g_gy trump yy___ witch __g__ eater
-3 __g_y hater
-3 __gy_ cater
-3 g_g__ water
-2 y____ eaten
-2 y__y_ matey
-2 g____ taken
-2 gy___ taker
-2 gy__y taper
-2 gy_y_ tamer
+1 _g_gy tweer g__gg yumps _____ taker
+3 ___y_ taper
+3 __g__ tamer
+2 y__gg hater _gggg cater
+3 
+2 y__g_ matey
+2 y_yg_ eaten
+2 y_ygg eater
+2 yy_gg water
+2 g__g_ taken
 1 yg___ spins y____ marsh _gggg harsh
 3 
 2 y___y gassy
@@ -2009,10 +2009,10 @@
 2 _gy_g rusty
 2 gg___ gusto
 2 gg__g gusty
-1 y__yy troth y____ fetus
-2 y__g_ zesty
+1 y__yy troth ___g_ zesty
+2 __yg_ pesto
+2 y____ fetus
 2 y_y_y ethos
-2 y_yg_ pesto
 2 g____ tense
 2 g___y these
 2 g__g_ testy
@@ -2036,12 +2036,12 @@
 2 ___gg stake
 2 _y__g stare
 2 y___g stage
-1 __y_y troll y__y_ blitz
-2 y__yg until
+1 __y_y troll y___g until
+2 y__y_ blitz
 2 y_yy_ lofty
 2 y_yg_ hotly
 2 y_gy_ cloth
-2 gy_yg twirl
+2 gy__g twirl
 2 gg_g_ truly
 2 
 1 _yyyg reply _y_y_ cleat _gggg bleat
@@ -2052,20 +2052,20 @@
 2 _g_g_ dealt
 2 _gyy_ leapt
 2 yy_y_ alert
-1 _gyy_ cadgy _g___ maple _g_gg fable
+1 _gyy_ perce ____g ladle _g_gg fable
 3 
-2 _g__g early
-2 _g_y_ eagle
-2 _g_g_ large
-2 _gg__ ladle
-2 yg___ lance
-2 gg___ cable
-1 y__g_ rumor ___y_ nosey
+2 ___yg cable
+2 ___gg lance
+2 __g_g large
+2 _y__g eagle
+2 _yg__ early
+2 y___g maple
+1 y__g_ rumor ____g wiser
+2 ___y_ nosey
+2 ___yg poser
+2 __y_g miser
+2 _y__g usher
 2 _g___ bused
-2 y___g wiser
-2 y__yg poser
-2 y_y_g miser
-2 yy__g usher
 2 g____ risen
 2 g___g riser
 1 yyy__ pucks ____y flash
@@ -2084,12 +2084,12 @@
 2 y__g_ savoy
 2 y_g__ sappy
 2 yy___ saucy
-1 __yyy title y__yy lefty
+1 __yyy title __gyy extol
+2 _ggyg lithe
+2 y__yy lefty
 2 y__yg flute
-2 y_gyy extol
 2 yy_yg elite
 2 yy_gg utile
-2 yggyg lithe
 2 
 1 _y_g_ unrip _____ abbey
 2 __y__ amber
@@ -2118,17 +2118,17 @@
 2 ygg__ valor
 2 ggg__ ralph
 2 
-1 yy__g tract y_y_g angst
-2 y_yyg ascot
-2 y_g_g boast
-2 y_gyg coast
-2 yyg_g roast
+1 yy__g tract __y_g angst
+2 __yyg ascot
+2 __g_g boast
+2 __gyg coast
+2 _yg_g roast
 2 g_g_g toast
 1 yg__y tythe yy___ pasty _gggg nasty
 3 
+2 _yg__ patsy
 2 y____ pasta
 2 yy_y_ hasty
-2 yyg__ patsy
 2 gyy__ tasty
 1 yg_yy witch __y__ upbye ____g taste
 3 __y_g baste
@@ -2205,7 +2205,7 @@
 1 _gg_y talon ygg__ waltz
 2 ggg__ tally
 2 
-1 _ggy_ valve ygggg halve
+1 _ggy_ valve _gggg halve
 2 ggg_g value
 2 
 1 yy__y trash y_yy_ vista
@@ -2245,7 +2245,7 @@
 2 
 1 _yyg_ angel gy_gy alien
 2 
-1 _ygg_ alley gygg_ abled
+1 _ygg_ alley g_gg_ abled
 2 
 1 _g_gg facet _gygg cadet
 2 
@@ -2259,7 +2259,7 @@
 2 
 1 g__gg sweet g_ggg sheet
 2 
-1 g_y_g stilt gyggg spilt
+1 g_y_g stilt g_ggg spilt
 2 
 1 g_yyy style gg_gg stole
 2 

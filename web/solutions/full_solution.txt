@@ -24,9 +24,9 @@ salet _____ courd __y__ guppy _g__g funny ggg_g funky ggggg
 salet _____ courd __y__ guppy _g__g funny ggggg
 salet _____ courd __y__ guppy _y__g unify ggggg
 salet _____ courd __y__ guppy _yy__ unzip ggggg
+salet _____ courd __y__ guppy _g_g_ humph ggggg
+salet _____ courd __y__ guppy _g_gg jumpy ggggg
 salet _____ courd __y__ guppy _gy_g puffy ggggg
-salet _____ courd __y__ guppy _gyg_ humph ggggg
-salet _____ courd __y__ guppy _gygg jumpy ggggg
 salet _____ courd __y__ guppy _gggg puppy ggggg
 salet _____ courd __y__ guppy yg___ fungi ggggg
 salet _____ courd __y__ guppy yg__g buggy ggggg
@@ -56,14 +56,14 @@ salet _____ courd _g___ boozy gg__g bobby ggggg
 salet _____ courd _g___ boozy ggy__ bongo ggggg
 salet _____ courd _g___ boozy ggg_g booby ggggg
 salet _____ courd _g___ boozy ggggg
-salet _____ courd _y___ owing y__g_ phony ggggg
-salet _____ courd _y___ owing y_y__ hippo ggggg
-salet _____ courd _y___ owing y_yy_ inbox ggggg
-salet _____ courd _y___ owing y_yyy bingo ggggg
-salet _____ courd _y___ owing yy___ whoop ggggg
-salet _____ courd _y___ owing yy_y_ known ggggg
-salet _____ courd _y___ owing g_gy_ onion ggggg
-salet _____ courd _y___ owing ggggg
+salet _____ courd _y___ whoop ___g_ inbox ggggg
+salet _____ courd _y___ whoop __y__ bingo ggggg
+salet _____ courd _y___ whoop __yg_ onion ggggg
+salet _____ courd _y___ whoop _yy_y hippo ggggg
+salet _____ courd _y___ whoop _gg_y phony ggggg
+salet _____ courd _y___ whoop y_y__ owing ggggg
+salet _____ courd _y___ whoop y_g__ known ggggg
+salet _____ courd _y___ whoop ggggg
 salet _____ courd _g__y howdy _g_gg moody _gggg goody ggggg
 salet _____ courd _g__y howdy _g_gg moody ggggg
 salet _____ courd _g__y howdy _g_y_ doing ggggg
@@ -94,8 +94,8 @@ salet _____ courd y____ wimpy _g_yg picky ggggg
 salet _____ courd y____ wimpy _gg__ mimic ggggg
 salet _____ courd y____ wimpy gy___ which ggggg
 salet _____ courd y____ wimpy gg___ winch ggggg
+salet _____ courd ____y giddy _g_gg windy ggggg
 salet _____ courd ____y giddy _gy_g dizzy ggggg
-salet _____ courd ____y giddy _gygg windy ggggg
 salet _____ courd ____y giddy _gggg biddy ggggg
 salet _____ courd ____y giddy yyy_y dying ggggg
 salet _____ courd ____y giddy ygy_g dingy ggggg
@@ -122,11 +122,11 @@ salet _____ courd _yy__ jumbo _yy_y opium ggggg
 salet _____ courd _yy__ jumbo _gyyy buxom ggggg
 salet _____ courd _yy__ jumbo _gggg gumbo ggggg
 salet _____ courd _yy__ jumbo ggggg
-salet _____ courd _yyy_ rumor yg_gg juror _gggg furor ggggg
-salet _____ courd _yyy_ rumor yg_gg juror ggggg
-salet _____ courd _yyy_ rumor yy_y_ group ggggg
-salet _____ courd _yyy_ rumor ygggg humor ggggg
-salet _____ courd _yyy_ rumor ggggg
+salet _____ courd _yyy_ juror _yyy_ group ggggg
+salet _____ courd _yyy_ juror _g_gg humor ggggg
+salet _____ courd _yyy_ juror _gygg rumor ggggg
+salet _____ courd _yyy_ juror _gggg furor ggggg
+salet _____ courd _yyy_ juror ggggg
 salet _____ courd gy_y_ zincy ___y_ crook ggggg
 salet _____ courd gy_y_ zincy ___g_ crock ggggg
 salet _____ courd gy_y_ zincy __yy_ crown ggggg
@@ -140,7 +140,7 @@ salet _____ courd gg___ conic gg___ comfy ggggg
 salet _____ courd gg___ conic gg_gg comic ggggg
 salet _____ courd gg___ conic ggg_y conch ggggg
 salet _____ courd gg___ conic ggggg
-salet _____ courd __yg_ hurry _gyg_ quirk ggggg
+salet _____ courd __yg_ hurry _g_g_ quirk ggggg
 salet _____ courd __yg_ hurry _gggg furry ggggg
 salet _____ courd __yg_ hurry ggggg
 salet _____ courd _y__y widow _yyg_ idiom ggggg
@@ -157,7 +157,7 @@ salet _____ courd g_g__ chunk ggg_g chuck ggggg
 salet _____ courd g_g__ chunk ggggg
 salet _____ courd ___yg rigid yyy_g grind ggggg
 salet _____ courd ___yg rigid ggggg
-salet _____ courd __y_g undid y_ygg humid ggggg
+salet _____ courd __y_g undid y__gg humid ggggg
 salet _____ courd __y_g undid ggggg
 salet _____ courd __yy_ rugby yg__g murky ggggg
 salet _____ courd __yy_ rugby ggggg
@@ -231,7 +231,7 @@ salet ___y_ drone ___yg winch _gg__ binge ggggg
 salet ___y_ drone ___yg winch _gg_y hinge ggggg
 salet ___y_ drone ___yg winch _ggg_ mince ggggg
 salet ___y_ drone ___yg winch gggg_ wince ggggg
-salet ___y_ drone _y__y pubic _____ merry _yygg every ggggg
+salet ___y_ drone _y__y pubic _____ merry _y_gg every ggggg
 salet ___y_ drone _y__y pubic _____ merry _gg_g jerky ggggg
 salet ___y_ drone _y__y pubic _____ merry _gggg ferry ggggg
 salet ___y_ drone _y__y pubic _____ merry ggggg
@@ -252,15 +252,15 @@ salet ___y_ drone ____g sieur _yyg_ imbue ggggg
 salet ___y_ drone ____g sieur _gy__ pixie ggggg
 salet ___y_ drone ____g sieur _gyg_ pique ggggg
 salet ___y_ drone ____g sieur _gg__ piece ggggg
-salet ___y_ drone _y__g vughy _____ eerie ggggg
-salet ___y_ drone _y__g vughy ___y_ where ggggg
-salet ___y_ drone _y__g vughy ___yy rhyme ggggg
-salet ___y_ drone _y__g vughy __y__ merge ggggg
-salet ___y_ drone _y__g vughy _gy__ purge ggggg
-salet ___y_ drone _y__g vughy yy___ revue ggggg
-salet ___y_ drone _y__g vughy yg___ curve ggggg
-salet ___y_ drone _y__g vughy g____ verve ggggg
-salet ___y_ drone _y__g vughy g_y__ verge ggggg
+salet ___y_ drone _y__g verge __y_g rhyme ggggg
+salet ___y_ drone _y__g verge __ggg purge ggggg
+salet ___y_ drone _y__g verge _yy_g where ggggg
+salet ___y_ drone _y__g verge _gg_g eerie ggggg
+salet ___y_ drone _y__g verge _gggg merge ggggg
+salet ___y_ drone _y__g verge y_g_g curve ggggg
+salet ___y_ drone _y__g verge ygy_g revue ggggg
+salet ___y_ drone _y__g verge ggg_g verve ggggg
+salet ___y_ drone _y__g verge ggggg
 salet ___y_ drone _g__g campi ____y bribe ggggg
 salet ___y_ drone _g__g campi ___yy prize ggggg
 salet ___y_ drone _g__g campi ___gy gripe ggggg
@@ -292,10 +292,10 @@ salet ___y_ drone ____y weigh _g__g beech ggggg
 salet ___y_ drone ____y weigh _g_y_ geeky ggggg
 salet ___y_ drone ____y weigh ggggg
 salet ___y_ drone _yy_g gorge _yy_g ombre ggggg
+salet ___y_ drone _yy_g gorge _gygg rouge ggggg
 salet ___y_ drone _yy_g gorge _gg_g force ggggg
+salet ___y_ drone _yy_g gorge _gggg forge ggggg
 salet ___y_ drone _yy_g gorge ygy_g rogue ggggg
-salet ___y_ drone _yy_g gorge ygygg rouge ggggg
-salet ___y_ drone _yy_g gorge ygggg forge ggggg
 salet ___y_ drone _yy_g gorge ggggg
 salet ___y_ drone _gg_g prove _gg_g froze _gg_g broke ggggg
 salet ___y_ drone _gg_g prove _gg_g froze ggggg
@@ -308,9 +308,9 @@ salet ___y_ drone __y_g voice _g_yg coupe ggggg
 salet ___y_ drone __y_g voice ygy_g movie ggggg
 salet ___y_ drone __y_g voice gg__g vogue ggggg
 salet ___y_ drone __y_g voice ggggg
-salet ___y_ drone ___gy penny _yyg_ eking ggggg
-salet ___y_ drone ___gy penny _yygy eying ggggg
-salet ___y_ drone ___gy penny _gyg_ being ggggg
+salet ___y_ drone ___gy penny _y_g_ eking ggggg
+salet ___y_ drone ___gy penny _y_gy eying ggggg
+salet ___y_ drone ___gy penny _g_g_ being ggggg
 salet ___y_ drone ___gy penny ggggg
 salet ___y_ drone __g_g zymic _____ evoke ggggg
 salet ___y_ drone __g_g zymic ____y choke ggggg
@@ -385,7 +385,7 @@ salet ___y_ drone ggggg
 salet ___g_ rownd y____ pubic ___y_ grief _yygy fixer ggggg
 salet ___g_ rownd y____ pubic ___y_ grief gyyg_ giver ggggg
 salet ___g_ rownd y____ pubic ___y_ grief ggggg
-salet ___g_ rownd y____ pubic _____ freer gyygg fever ggggg
+salet ___g_ rownd y____ pubic _____ freer g_ygg fever ggggg
 salet ___g_ rownd y____ pubic _____ freer ggggg
 salet ___g_ rownd y____ pubic ____y creek gygg_ cheer ggggg
 salet ___g_ rownd y____ pubic ____y creek ggggg
@@ -428,10 +428,10 @@ salet ___g_ rownd y__y_ miner _yggg inner ggggg
 salet ___g_ rownd y__y_ miner _gygg nicer ggggg
 salet ___g_ rownd y__y_ miner _gggg finer ggggg
 salet ___g_ rownd y__y_ miner ggggg
-salet ___g_ rownd y___y drier yy_gg udder ggggg
-salet ___g_ rownd y___y drier yyygg cider ggggg
-salet ___g_ rownd y___y drier gy_gg defer ggggg
-salet ___g_ rownd y___y drier gyygg diver ggggg
+salet ___g_ rownd y___y drier y__gg udder ggggg
+salet ___g_ rownd y___y drier y_ygg cider ggggg
+salet ___g_ rownd y___y drier g__gg defer ggggg
+salet ___g_ rownd y___y drier g_ygg diver ggggg
 salet ___g_ rownd y___y drier gg_gg dryer ggggg
 salet ___g_ rownd y___y drier ggggg
 salet ___g_ rownd ___y_ zingy __y__ queen ggggg
@@ -439,10 +439,10 @@ salet ___g_ rownd ___y_ zingy __y_y hymen ggggg
 salet ___g_ rownd ___y_ zingy _gy__ vixen ggggg
 salet ___g_ rownd ___y_ zingy _gyy_ given ggggg
 salet ___g_ rownd ___y_ zingy _gg_g piney ggggg
-salet ___g_ rownd _____ chief y__g_ emcee ggggg
-salet ___g_ rownd _____ chief y_yg_ bicep ggggg
-salet ___g_ rownd _____ chief gg_g_ cheek ggggg
-salet ___g_ rownd _____ chief ggggg
+salet ___g_ rownd _____ emcee __yg_ chief ggggg
+salet ___g_ rownd _____ emcee __gg_ bicep ggggg
+salet ___g_ rownd _____ emcee y_yg_ cheek ggggg
+salet ___g_ rownd _____ emcee ggggg
 salet ___g_ rownd _g_y_ womby _g___ coven ggggg
 salet ___g_ rownd _g_y_ womby _g__g honey ggggg
 salet ___g_ rownd _g_y_ womby _g_yg boney ggggg
@@ -465,7 +465,7 @@ salet ___g_ rownd _g__y modem _gyg_ dopey ggggg
 salet ___g_ rownd _g__y modem ggggg
 salet ___g_ rownd y__yy under _yygg diner ggggg
 salet ___g_ rownd y__yy under ggggg
-salet ___g_ rownd yy__y order gyggg odder ggggg
+salet ___g_ rownd yy__y order g_ggg odder ggggg
 salet ___g_ rownd yy__y order ggggg
 salet ___g_ rownd g___y ruder g_ggg rider ggggg
 salet ___g_ rownd g___y ruder ggggg
@@ -601,7 +601,7 @@ salet __y__ courd _____ lying gg___ lymph ggggg
 salet __y__ courd _____ lying ggggg
 salet __y__ courd g____ knoll ___y_ climb ggg__ cliff ggggg
 salet __y__ courd g____ knoll ___y_ climb ggggg
-salet __y__ courd g____ knoll ___yg civil ggggg
+salet __y__ courd g____ knoll ____g civil ggggg
 salet __y__ courd g____ knoll ___g_ chili ggggg
 salet __y__ courd g____ knoll ___gg chill ggggg
 salet __y__ courd g____ knoll _y_y_ cling ggggg
@@ -640,7 +640,7 @@ salet __y__ courd ____g livid yy__g blind ggggg
 salet __y__ courd ____g livid gg_gg lipid ggggg
 salet __y__ courd ____g livid ggggg
 salet __y__ courd __y__ quill _g_y_ lumpy ggggg
-salet __y__ courd __y__ quill _gyyg pupil ggggg
+salet __y__ courd __y__ quill _gy_g pupil ggggg
 salet __y__ courd __y__ quill ggggg
 salet __y__ courd _y__g flood _gg_g blond ggggg
 salet __y__ courd _y__g flood _gggg blood ggggg
@@ -656,7 +656,7 @@ salet __y__ courd __y_g guild _gggg build ggggg
 salet __y__ courd __y_g guild ggggg
 salet __y__ courd _y_yy drool ggg_g droll ggggg
 salet __y__ courd _y_yy drool ggggg
-salet __y__ courd y____ icily yygy_ flick ggggg
+salet __y__ courd y____ icily _ygy_ flick ggggg
 salet __y__ courd y____ icily ggggg
 salet __y__ courd y_y__ lunch gg_y_ lucky ggggg
 salet __y__ courd y_y__ lunch ggggg
@@ -688,7 +688,7 @@ salet __y__ courd g_yy_ curly ggggg
 salet __y__ courd gyy_g cloud ggggg
 salet __y__ courd gg___ coyly ggggg
 salet __y__ courd ggg_g could ggggg
-salet ____y north ___yg wiped _____ hutch ygggg butch ggggg
+salet ____y north ___yg wiped _____ hutch _gggg butch ggggg
 salet ____y north ___yg wiped _____ hutch ggggg
 salet ____y north ___yg wiped ____y dutch ggggg
 salet ____y north ___yg wiped _y___ thigh ggggg
@@ -739,7 +739,7 @@ salet ____y north _yygg froth _gggg broth ggggg
 salet ____y north _yygg froth ggggg
 salet ____y north _ygyy throw gggg_ throb ggggg
 salet ____y north _ygyy throw ggggg
-salet ____y north _gyy_ rotor ygggg motor ggggg
+salet ____y north _gyy_ rotor _gggg motor ggggg
 salet ____y north _gyy_ rotor ggggg
 salet ____y north _gggg worth _gggg forth ggggg
 salet ____y north _gggg worth ggggg
@@ -782,14 +782,14 @@ salet _y_y_ beard _yg__ kanga _yy__ inane ggggg
 salet _y_y_ beard _yg__ kanga yy___ quake ggggg
 salet _y_y_ beard _yg__ kanga yy__y awake ggggg
 salet _y_y_ beard _yg__ kanga gyy__ knave ggggg
-salet _y_y_ beard _ygy_ cezve _y__g grape _gg_g frame ggggg
-salet _y_y_ beard _ygy_ cezve _y__g grape ggggg
-salet _y_y_ beard _ygy_ cezve _y_gg grave ggggg
-salet _y_y_ beard _ygy_ cezve _yy_g graze ggggg
-salet _y_y_ beard _ygy_ cezve yy__g grace ggggg
-salet _y_y_ beard _ygy_ cezve gy__g crane ggggg
-salet _y_y_ beard _ygy_ cezve gy_gg crave ggggg
-salet _y_y_ beard _ygy_ cezve gyy_g craze ggggg
+salet _y_y_ beard _ygy_ cezve ____g grape _gg_g frame ggggg
+salet _y_y_ beard _ygy_ cezve ____g grape ggggg
+salet _y_y_ beard _ygy_ cezve ___gg grave ggggg
+salet _y_y_ beard _ygy_ cezve __y_g graze ggggg
+salet _y_y_ beard _ygy_ cezve y___g grace ggggg
+salet _y_y_ beard _ygy_ cezve g___g crane ggggg
+salet _y_y_ beard _ygy_ cezve g__gg crave ggggg
+salet _y_y_ beard _ygy_ cezve g_y_g craze ggggg
 salet _y_y_ beard _yy__ omega __g_y cheap ggggg
 salet _y_y_ beard _yy__ omega __g_g hyena ggggg
 salet _y_y_ beard _yy__ omega _yy_y anime ggggg
@@ -829,7 +829,7 @@ salet _y_y_ beard yyy_y adobe ggggg
 salet _y_y_ beard gygy_ zacks _y___ brave ggggg
 salet _y_y_ beard gygy_ zacks _y_g_ brake ggggg
 salet _y_y_ beard gygy_ zacks _yy__ brace ggggg
-salet _y_y_ beard _yg_y evade y_gyg adage ggggg
+salet _y_y_ beard _yg_y evade __gyg adage ggggg
 salet _y_y_ beard _yg_y evade ggggg
 salet _y_y_ beard _gy_y media _gy_y decay ggggg
 salet _y_y_ beard _gy_y media ggggg
@@ -868,11 +868,11 @@ salet _g___ corny ____g pudgy y___g happy ggggg
 salet _g___ corny ____g pudgy g_g_g paddy ggggg
 salet _g___ corny _____ mamma _g___ vapid ggggg
 salet _g___ corny _____ mamma _g__g kappa ggggg
-salet _g___ corny _____ mamma ygggg gamma ggggg
+salet _g___ corny _____ mamma _gggg gamma ggggg
 salet _g___ corny _____ mamma gg__g mafia ggggg
+salet _g___ corny _____ mamma gg_gg magma ggggg
 salet _g___ corny _____ mamma ggy__ maxim ggggg
 salet _g___ corny _____ mamma ggy_y madam ggggg
-salet _g___ corny _____ mamma ggygg magma ggggg
 salet _g___ corny _____ mamma ggggg
 salet _g___ corny __y__ rapid gg___ rajah ggggg
 salet _g___ corny __y__ rapid gg__y radar ggggg
@@ -885,11 +885,11 @@ salet _g___ corny __g_g thorp ___gy parry ggggg
 salet _g___ corny __g_g thorp _y_y_ hardy ggggg
 salet _g___ corny __g_g thorp _y_yy harpy ggggg
 salet _g___ corny __g_g thorp _y_g_ harry ggggg
+salet _g___ corny _yy__ vroom _y_g_ razor ggggg
+salet _g___ corny _yy__ vroom _y_gy major ggggg
 salet _g___ corny _yy__ vroom _yy__ radio ggggg
-salet _g___ corny _yy__ vroom _yyg_ razor ggggg
-salet _g___ corny _yy__ vroom _yygy major ggggg
-salet _g___ corny _yy__ vroom yyyg_ favor ggggg
-salet _g___ corny _yy__ vroom gyyg_ vapor ggggg
+salet _g___ corny _yy__ vroom yy_g_ favor ggggg
+salet _g___ corny _yy__ vroom gy_g_ vapor ggggg
 salet _g___ corny ___y_ pagan _g_yy mania ggggg
 salet _g___ corny ___y_ pagan _gyyy manga ggggg
 salet _g___ corny ___y_ pagan ggggg
@@ -902,7 +902,7 @@ salet _g___ corny __y_g yodhs y_y__ dairy ggggg
 salet _g___ corny _y_y_ wagon _g_yy banjo ggggg
 salet _g___ corny _y_y_ wagon _gyyy mango ggggg
 salet _g___ corny _y_y_ wagon ggggg
-salet _g___ corny ___gg nanny ygggg fanny ggggg
+salet _g___ corny ___gg nanny _gggg fanny ggggg
 salet _g___ corny ___gg nanny ggggg
 salet _g___ corny __g__ parka _ggyg karma ggggg
 salet _g___ corny __g__ parka ggggg
@@ -977,13 +977,13 @@ salet _yy__ corni _g___ modal ggggg
 salet _yy__ corni __y__ drawl _yg_y alarm ggggg
 salet _yy__ corni __y__ drawl _gggg brawl ggggg
 salet _yy__ corni __y__ drawl ggggg
-salet _yy__ corni yg___ vocal _gggg local ygggg focal ggggg
+salet _yy__ corni yg___ vocal _gggg local _gggg focal ggggg
 salet _yy__ corni yg___ vocal _gggg local ggggg
 salet _yy__ corni yg___ vocal ggggg
 salet _yy__ corni g____ clamp gyg__ chalk ggggg
 salet _yy__ corni g____ clamp ggg__ clack ggggg
 salet _yy__ corni g____ clamp ggggg
-salet _yy__ corni __g__ rural ygggg mural ggggg
+salet _yy__ corni __g__ rural _gggg mural ggggg
 salet _yy__ corni __g__ rural ggggg
 salet _yy__ corni y____ flack _gggg black ggggg
 salet _yy__ corni y____ flack ggggg
@@ -1061,58 +1061,58 @@ salet g____ unrip y_g_g syrup ggggg
 salet g____ unrip yy__y spunk ggggg
 salet g____ unrip yy_y_ suing ggggg
 salet g____ unrip yyy_y spurn ggggg
-salet ___yy trice y___y petty _gygg hefty ggggg
-salet ___yy trice y___y petty _gg__ detox ggggg
-salet ___yy trice y___y petty _gggg jetty ggggg
-salet ___yy trice y___y petty yyygg empty ggggg
-salet ___yy trice y___y petty ygyg_ depth ggggg
-salet ___yy trice y___y petty ggggg
-salet ___yy trice yy__y retry yyggg entry ggggg
-salet ___yy trice yy__y retry ygy__ berth ggggg
-salet ___yy trice yy__y retry yggg_ metro ggggg
-salet ___yy trice yy__y retry gggg_ retro ggggg
-salet ___yy trice yy__y retry ggggg
-salet ___yy trice g___y zygon _____ teeth ggggg
-salet ___yy trice g___y zygon ____y tenth ggggg
-salet ___yy trice g___y zygon ___y_ tempo ggggg
-salet ___yy trice g___y zygon _y___ teddy ggggg
-salet ___yy trice y___g quote _y_yg etude ggggg
-salet ___yy trice y___g quote _g_gg butte ggggg
-salet ___yy trice y___g quote ggggg
-salet ___yy trice y_g_g unite __ggg white ggggg
-salet ___yy trice y_g_g unite y_ggg quite ggggg
-salet ___yy trice y_g_g unite ggggg
-salet ___yy trice ggg_g upbye ____g trite ggggg
-salet ___yy trice ggg_g upbye __y_g tribe ggggg
-salet ___yy trice ggg_g upbye _y__g tripe ggggg
-salet ___yy trice y_y_y piety _yyy_ fetid ggggg
-salet ___yy trice y_y_y piety ggggg
-salet ___yy trice yy__g route yg_gg forte ggggg
-salet ___yy trice yy__g route ggggg
-salet ___yy trice yg__g wrote _g_gg brute ggggg
-salet ___yy trice yg__g wrote ggggg
-salet ___yy trice g___g thyme gg_gg theme ggggg
-salet ___yy trice g___g thyme ggggg
-salet ___yy trice gg__g trove ggg_g trope ggggg
-salet ___yy trice gg__g trove ggggg
-salet ___yy trice y__yg chute ggggg
-salet ___yy trice y__gy fetch ggggg
-salet ___yy trice y_y_g untie ggggg
-salet ___yy trice y_yyy ethic ggggg
-salet ___yy trice y_yyg cutie ggggg
-salet ___yy trice y_g_y deity ggggg
-salet ___yy trice yy_gy retch ggggg
-salet ___yy trice ygg_g write ggggg
-salet ___yy trice g_y_y tepid ggggg
-salet ___yy trice g_y_g tithe ggggg
-salet ___yy trice g_g_g twine ggggg
-salet ___yy trice g_ggg twice ggggg
-salet ___yy trice gy__y tenor ggggg
-salet ___yy trice gy__g there ggggg
-salet ___yy trice gyy_y their ggggg
-salet ___yy trice gg__y trend ggggg
-salet ___yy trice gg_gg truce ggggg
-salet ___yy trice ggggg
+salet ___yy trite yy__y retry _yggg entry ggggg
+salet ___yy trite yy__y retry _ggg_ metro ggggg
+salet ___yy trite yy__y retry ggg__ retch ggggg
+salet ___yy trite yy__y retry gggg_ retro ggggg
+salet ___yy trite yy__y retry ggggg
+salet ___yy trite ___gy hefty _y_gg empty ggggg
+salet ___yy trite ___gy hefty yg_g_ depth ggggg
+salet ___yy trite ___gy hefty ggggg
+salet ___yy trite __ggg unite __ggg white ggggg
+salet ___yy trite __ggg unite y_ggg quite ggggg
+salet ___yy trite __ggg unite ggggg
+salet ___yy trite gg__g trove gg__g truce ggggg
+salet ___yy trite gg__g trove ggg_g trope ggggg
+salet ___yy trite gg__g trove ggggg
+salet ___yy trite ggg_g zebec _y___ tripe ggggg
+salet ___yy trite ggg_g zebec _y__y trice ggggg
+salet ___yy trite ggg_g zebec _yy__ tribe ggggg
+salet ___yy trite ___gg quote _y_gg chute ggggg
+salet ___yy trite ___gg quote ggggg
+salet ___yy trite _y_gg route yg_gg forte ggggg
+salet ___yy trite _y_gg route ggggg
+salet ___yy trite _g_gg wrote _g_gg brute ggggg
+salet ___yy trite _g_gg wrote ggggg
+salet ___yy trite y___y fetch _gg__ detox ggggg
+salet ___yy trite y___y fetch ggggg
+salet ___yy trite y__gy petty _gggg jetty ggggg
+salet ___yy trite y__gy petty ggggg
+salet ___yy trite y_y_y fetid _yyg_ ethic ggggg
+salet ___yy trite y_y_y fetid ggggg
+salet ___yy trite y_y_g untie y_ggg cutie ggggg
+salet ___yy trite y_y_g untie ggggg
+salet ___yy trite g___y tempo gg___ teddy ggggg
+salet ___yy trite g___y tempo ggggg
+salet ___yy trite g___g thyme gg_gg theme ggggg
+salet ___yy trite g___g thyme ggggg
+salet ___yy trite g__gy tenth gg_gg teeth ggggg
+salet ___yy trite g__gy tenth ggggg
+salet ___yy trite g_g_g twine ggg_g twice ggggg
+salet ___yy trite g_g_g twine ggggg
+salet ___yy trite __ygy piety ggggg
+salet ___yy trite __ggy deity ggggg
+salet ___yy trite _y_gy berth ggggg
+salet ___yy trite _gggg write ggggg
+salet ___yy trite y___g etude ggggg
+salet ___yy trite y__gg butte ggggg
+salet ___yy trite g_y_y tepid ggggg
+salet ___yy trite g_yyg tithe ggggg
+salet ___yy trite gy__y tenor ggggg
+salet ___yy trite gy__g there ggggg
+salet ___yy trite gyy_y their ggggg
+salet ___yy trite gg__y trend ggggg
+salet ___yy trite ggggg
 salet __yy_ doing _____ clump _y___ leery ggggg
 salet __yy_ doing _____ clump _y__y reply ggggg
 salet __yy_ doing _____ clump _y__g whelp ggggg
@@ -1130,7 +1130,7 @@ salet __yy_ doing _y___ elbow yg_y_ clove ggggg
 salet __yy_ doing _y___ elbow ygyy_ bloke ggggg
 salet __yy_ doing _y___ elbow gg_y_ elope ggggg
 salet __yy_ doing _y___ elbow ggggg
-salet __yy_ doing ____y leggy yyygg elegy ggggg
+salet __yy_ doing ____y leggy yy_gg elegy ggggg
 salet __yy_ doing ____y leggy yyg__ bugle ggggg
 salet __yy_ doing ____y leggy ggggg
 salet __yy_ doing __y__ rifle _g_gg bible ggggg
@@ -1162,18 +1162,18 @@ salet __yy_ doing y_g_y glide ggggg
 salet __yy_ doing yg__y lodge ggggg
 salet __yy_ doing g____ dwell ggggg
 salet __yy_ doing g_y__ devil ggggg
-salet _yyy_ gnarl __g_y fehme _y__g blaze _gg_g place ggggg
-salet _yyy_ gnarl __g_y fehme _y__g blaze ggg_g blade ggggg
-salet _yyy_ gnarl __g_y fehme _y__g blaze ggggg
-salet _yyy_ gnarl __g_y fehme _y_gg blame ggggg
-salet _yyy_ gnarl __g_y fehme _yy_g whale ggggg
+salet _yyy_ gnarl __g_y fehme ____g blaze _gg_g place ggggg
+salet _yyy_ gnarl __g_y fehme ____g blaze ggg_g blade ggggg
+salet _yyy_ gnarl __g_y fehme ____g blaze ggggg
+salet _yyy_ gnarl __g_y fehme ___gg blame ggggg
+salet _yyy_ gnarl __g_y fehme __y_g whale ggggg
 salet _yyy_ gnarl __g_y fehme _g___ leaky ggggg
 salet _yyy_ gnarl __g_y fehme _g__g leave ggggg
 salet _yyy_ gnarl __g_y fehme _g_y_ mealy ggggg
 salet _yyy_ gnarl __g_y fehme _gy__ leach ggggg
 salet _yyy_ gnarl __g_y fehme yg___ leafy ggggg
-salet _yyy_ gnarl __g_y fehme gy__g flake ggggg
-salet _yyy_ gnarl __g_y fehme gy_gg flame ggggg
+salet _yyy_ gnarl __g_y fehme g___g flake ggggg
+salet _yyy_ gnarl __g_y fehme g__gg flame ggggg
 salet _yyy_ gnarl __y_y spike ____g amble ggggg
 salet _yyy_ gnarl __y_y spike ___yy bleak ggggg
 salet _yyy_ gnarl __y_y spike __g_g alive ggggg
@@ -1296,10 +1296,10 @@ salet y____ mucho gg___ musky ggggg
 salet y____ mucho gg_g_ mushy ggggg
 salet y____ mucho ggy__ music ggggg
 salet y____ mucho ggg__ mucus ggggg
-salet y__y_ rhone __y_g posse _yygg obese ggggg
-salet y__y_ rhone __y_g posse _gygg mouse ggggg
-salet y__y_ rhone __y_g posse ygygg copse ggggg
-salet y__y_ rhone __y_g posse ggygg poise ggggg
+salet y__y_ rhone __y_g posse _y_gg obese ggggg
+salet y__y_ rhone __y_g posse _g_gg mouse ggggg
+salet y__y_ rhone __y_g posse yg_gg copse ggggg
+salet y__y_ rhone __y_g posse gg_gg poise ggggg
 salet y__y_ rhone __y_g posse ggggg
 salet y__y_ rhone ____g issue _y__g geese ggggg
 salet y__y_ rhone ____g issue yy_yg guise ggggg
@@ -1334,7 +1334,7 @@ salet y__y_ rhone g___g reuse ggggg
 salet y__y_ rhone g__yy resin ggggg
 salet y__y_ rhone g__yg rinse ggggg
 salet y__y_ rhone g_y_g rouse ggggg
-salet ____g groin y__y_ wormy _____ tight ygggg fight ggggg
+salet ____g groin y__y_ wormy _____ tight _gggg fight ggggg
 salet ____g groin y__y_ wormy _____ tight ggggg
 salet ____g groin y__y_ wormy ___y_ might ggggg
 salet ____g groin y__y_ wormy g____ wight ggggg
@@ -1371,12 +1371,12 @@ salet ____g groin y_yyy ingot ggggg
 salet ____g groin yy_y_ right ggggg
 salet ____g groin gg__y grunt ggggg
 salet ____g groin ggg__ grout ggggg
-salet g__y_ prink _y___ teuch _y___ swore ggggg
-salet g__y_ prink _y___ teuch _y__y shore ggggg
-salet g__y_ prink _y___ teuch _y_y_ score ggggg
-salet g__y_ prink _y___ teuch _yy__ surge ggggg
-salet g__y_ prink _y___ teuch _g___ serve ggggg
-salet g__y_ prink _y___ teuch _gy__ serum ggggg
+salet g__y_ prink _y___ where ___yg surge ggggg
+salet g__y_ prink _y___ where ___gg score ggggg
+salet g__y_ prink _y___ where __yy_ serum ggggg
+salet g__y_ prink _y___ where __yyg serve ggggg
+salet g__y_ prink _y___ where _g_gg shore ggggg
+salet g__y_ prink _y___ where y__gg swore ggggg
 salet g__y_ prink _____ shove g___y seedy ggggg
 salet g__y_ prink _____ shove g___g segue ggggg
 salet g__y_ prink _____ shove ggggg
@@ -1458,7 +1458,7 @@ salet _g__y pubco ___y_ tacky ygg__ cacti ggggg
 salet _g__y pubco ___y_ tacky ggggg
 salet _g__y pubco ____g tango yg__g ratio ggggg
 salet _g__y pubco ____g tango ggggg
-salet _g__y pubco g____ patty ggygg party ggggg
+salet _g__y pubco g____ patty gg_gg party ggggg
 salet _g__y pubco g____ patty ggggg
 salet _g__y pubco __y__ batty ggggg
 salet _g__y pubco __y_y baton ggggg
@@ -1522,30 +1522,30 @@ salet g___y pinko _yy__ sting ggggg
 salet g___y pinko _yyy_ stink ggggg
 salet g___y pinko y____ stump ggggg
 salet g___y pinko yy___ strip ggggg
-salet ___gy mohur ____g inter __ggg deter ggggg
-salet ___gy mohur ____g inter _gggg enter ggggg
-salet ___gy mohur ____g inter y_ygg tiger ggggg
-salet ___gy mohur ____g inter ggggg
-salet ___gy mohur ___yg tuber yy_gg utter ggggg
-salet ___gy mohur ___yg tuber gy_gg truer ggggg
-salet ___gy mohur ___yg tuber ggggg
-salet ___gy mohur _____ tweed g_yg_ tepee ggggg
-salet ___gy mohur _____ tweed ggggg
-salet ___gy mohur __y_y threw gggg_ three ggggg
-salet ___gy mohur __y_y threw ggggg
-salet ___gy mohur _g__g voter _gygg tower ggggg
-salet ___gy mohur _g__g voter ggggg
-salet ___gy mohur ____y tried ggggg
-salet ___gy mohur __y__ thief ggggg
-salet ___gy mohur __g_g ether ggggg
-salet ___gy mohur _y___ often ggggg
-salet ___gy mohur _y__g otter ggggg
-salet ___gy mohur _y_yg outer ggggg
-salet ___gy mohur _yg_g other ggggg
-salet ___gy mohur _g___ token ggggg
-salet ___gy mohur y___g timer ggggg
-salet ___gy mohur yg___ totem ggggg
-salet ___gy mohur g___g meter ggggg
+salet ___gy tutor __g_g meter __ggg inter ggggg
+salet ___gy tutor __g_g meter _yggg enter ggggg
+salet ___gy tutor __g_g meter _gggg deter ggggg
+salet ___gy tutor __g_g meter ggggg
+salet ___gy tutor g____ tweed g__g_ thief ggggg
+salet ___gy tutor g____ tweed g_yg_ tepee ggggg
+salet ___gy tutor g____ tweed ggggg
+salet ___gy tutor g___y threw g_yg_ tried ggggg
+salet ___gy tutor g___y threw gggg_ three ggggg
+salet ___gy tutor g___y threw ggggg
+salet ___gy tutor g___g timer gg_gg tiger ggggg
+salet ___gy tutor g___g timer ggggg
+salet ___gy tutor __gy_ often ggggg
+salet ___gy tutor __gyg voter ggggg
+salet ___gy tutor _ggyg outer ggggg
+salet ___gy tutor y___g ether ggggg
+salet ___gy tutor y__yg other ggggg
+salet ___gy tutor y_gyg otter ggggg
+salet ___gy tutor yyg_g utter ggggg
+salet ___gy tutor g__y_ token ggggg
+salet ___gy tutor g__yg tower ggggg
+salet ___gy tutor g_gy_ totem ggggg
+salet ___gy tutor gy__g truer ggggg
+salet ___gy tutor gg__g tuber ggggg
 salet _g_g_ gormy __y__ caper _g_gg waver _g_gg baker ggggg
 salet _g_g_ gormy __y__ caper _g_gg waver gg_gg wafer ggggg
 salet _g_g_ gormy __y__ caper _g_gg waver ggggg
@@ -1557,7 +1557,7 @@ salet _g_g_ gormy _____ waxen _g_gg haven ggggg
 salet _g_g_ gormy _____ waxen ggggg
 salet _g_g_ gormy __yy_ ramen ygyg_ maker ggggg
 salet _g_g_ gormy __yy_ ramen ggggg
-salet _g_g_ gormy __g__ rarer ygggg parer ggggg
+salet _g_g_ gormy __g__ rarer _gggg parer ggggg
 salet _g_g_ gormy __g__ rarer ggggg
 salet _g_g_ gormy y_y__ wager _gggg eager ggggg
 salet _g_g_ gormy y_y__ wager ggggg
@@ -1594,11 +1594,11 @@ salet g_y__ plink _gggg slink ggggg
 salet g_y__ plink yy___ spool ggggg
 salet g_y__ plink yyy__ spoil ggggg
 salet g_y__ plink yyg__ spill ggggg
-salet g__g_ thrip __y__ yewen _y_g_ sober ggggg
-salet g__g_ thrip __y__ yewen _y_gy sneer ggggg
-salet g__g_ thrip __y__ yewen _ygg_ sower ggggg
-salet g__g_ thrip __y__ yewen _g_g_ sever ggggg
-salet g__g_ thrip __y__ yewen _ggg_ sewer ggggg
+salet g__g_ thrip __y__ sewer g__gg sober ggggg
+salet g__g_ thrip __y__ sewer g_ggg sower ggggg
+salet g__g_ thrip __y__ sewer gy_gg sneer ggggg
+salet g__g_ thrip __y__ sewer gg_gg sever ggggg
+salet g__g_ thrip __y__ sewer ggggg
 salet g__g_ thrip __g__ screw g_gg_ surer ggggg
 salet g__g_ thrip __g__ screw gggg_ scree ggggg
 salet g__g_ thrip __g__ screw ggggg
@@ -1617,7 +1617,7 @@ salet g__g_ thrip _g__g sheep ggggg
 salet g__g_ thrip _g_y_ shied ggggg
 salet g__g_ thrip _gy__ sheer ggggg
 salet g__g_ thrip _gg__ shrew ggggg
-salet ___yg runic _____ theft y_y_g depot ggggg
+salet ___yg runic _____ theft __y_g depot ggggg
 salet ___yg runic _____ theft ggggg
 salet ___yg runic ___yy evict g_ggg edict ggggg
 salet ___yg runic ___yy evict ggggg
@@ -1625,7 +1625,7 @@ salet ___yg runic ___g_ debit _gygg befit ggggg
 salet ___yg runic ___g_ debit ggggg
 salet ___yg runic y____ overt __ggg exert ggggg
 salet ___yg runic y____ overt ggggg
-salet ___yg runic y___y erect yggyg crept ggggg
+salet ___yg runic y___y erect _ggyg crept ggggg
 salet ___yg runic y___y erect ggggg
 salet ___yg runic g__g_ remit gg_gg refit ggggg
 salet ___yg runic g__g_ remit ggggg
@@ -1686,7 +1686,7 @@ salet _y__g crudo _g___ grant ggg_g graft ggggg
 salet _y__g crudo _g___ grant ggggg
 salet _y__g crudo _____ giant _yg_g await ggggg
 salet _y__g crudo _____ giant ggggg
-salet _y__g crudo ____y afoot g_ygg abbot ggggg
+salet _y__g crudo ____y afoot g__gg abbot ggggg
 salet _y__g crudo ____y afoot ggggg
 salet _y__g crudo ___y_ admit gg__g adapt ggggg
 salet _y__g crudo ___y_ admit ggggg
@@ -1702,9 +1702,9 @@ salet _y__g crudo g____ chant ggggg
 salet _y__g crudo gy___ chart ggggg
 salet _y__g crudo gg___ craft ggggg
 salet _y_yy trace y_g_y heath _ggg_ meaty ggggg
-salet _y_yy trace y_g_y heath ygggg death ggggg
+salet _y_yy trace y_g_y heath _gggg death ggggg
 salet _y_yy trace y_g_y heath ggggg
-salet _y_yy trace y_g_g agate y_ggg ovate ggggg
+salet _y_yy trace y_g_g agate __ggg ovate ggggg
 salet _y_yy trace y_g_g agate g_ggg abate ggggg
 salet _y_yy trace y_g_g agate ggggg
 salet _y_yy trace ygg_g irate _gggg grate ggggg
@@ -1743,7 +1743,7 @@ salet y___g trois ygg_y frost ggggg
 salet y___g trois g__yy twist ggggg
 salet g___g churn ___g_ sport g__gg skirt ggggg
 salet g___g churn ___g_ sport ggggg
-salet g___g churn __y__ stout gyggg spout ggggg
+salet g___g churn __y__ stout g_ggg spout ggggg
 salet g___g churn __y__ stout ggggg
 salet g___g churn _g___ shoot gg__g shift ggggg
 salet g___g churn _g___ shoot ggggg
@@ -1912,42 +1912,42 @@ salet _y_yg wrang _yy__ avert ggggg
 salet _y_yg wrang _gy__ treat ggggg
 salet _y_yg wrang _gy_y great ggggg
 salet _y_yg wrang g_y__ wheat ggggg
+salet gyy__ ghyll ____g snarl ggg_g snail ggggg
+salet gyy__ ghyll ____g snarl ggggg
 salet gyy__ ghyll ___y_ slain ggg__ slack ggggg
 salet gyy__ ghyll ___y_ slain ggggg
-salet gyy__ ghyll ___yg snarl ggg_g snail ggggg
-salet gyy__ ghyll ___yg snarl ggggg
 salet gyy__ ghyll ___g_ scalp gggg_ scald ggggg
 salet gyy__ ghyll ___g_ scalp ggggg
-salet gyy__ ghyll _g_yg shoal gg_yg shawl ggggg
-salet gyy__ ghyll _g_yg shoal ggggg
+salet gyy__ ghyll _g__g shoal gg_yg shawl ggggg
+salet gyy__ ghyll _g__g shoal ggggg
 salet gyy__ ghyll ___gg small ggggg
 salet gyy__ ghyll __yg_ scaly ggggg
 salet gyy__ ghyll _y_y_ slash ggggg
 salet gyy__ ghyll _g_gg shall ggggg
 salet gyy__ ghyll y__y_ slang ggggg
-salet yy_y_ cuish ___g_ erase y_ggg abase ggggg
-salet yy_y_ cuish ___g_ erase ygygg arose ggggg
-salet yy_y_ cuish ___g_ erase ggggg
-salet yy_y_ cuish _y_g_ amuse g_ggg abuse ggggg
-salet yy_y_ cuish _y_g_ amuse ggggg
-salet yy_y_ cuish ___y_ essay ggggg
-salet yy_y_ cuish ___gy phase ggggg
-salet yy_y_ cuish __gy_ aside ggggg
-salet yy_y_ cuish __gg_ arise ggggg
-salet yy_y_ cuish _y_y_ usage ggggg
-salet yy_y_ cuish g__g_ cease ggggg
-salet yy_y_ cuish g__gy chase ggggg
-salet _yg__ polly ggg__ polka ggg_y polar ggggg
-salet _yg__ polly ggg__ polka ggggg
-salet _yg__ polly __g_y bylaw ggggg
-salet _yg__ polly __g_g inlay ggggg
-salet _yg__ polly __gy_ lilac ggggg
-salet _yg__ polly __gyg allay ggggg
-salet _yg__ polly __gg_ villa ggggg
-salet _yg__ polly _yg__ aglow ggggg
-salet _yg__ polly _ygy_ allow ggggg
-salet _yg__ polly _ygyg alloy ggggg
-salet _yg__ polly _gg__ molar ggggg
+salet yy_y_ erase __ggg phase __ggg abase ggggg
+salet yy_y_ erase __ggg phase _gggg chase ggggg
+salet yy_y_ erase __ggg phase ggggg
+salet yy_y_ erase __ygg amuse g_ggg abuse ggggg
+salet yy_y_ erase __ygg amuse ggggg
+salet yy_y_ erase _gygg arose gg_gg arise ggggg
+salet yy_y_ erase _gygg arose ggggg
+salet yy_y_ erase __yyg aside ggggg
+salet yy_y_ erase __gyg usage ggggg
+salet yy_y_ erase y_ggg cease ggggg
+salet yy_y_ erase g_yy_ essay ggggg
+salet yy_y_ erase ggggg
+salet _yg__ allay __gg_ polar _gggg molar ggggg
+salet _yg__ allay __gg_ polar ggggg
+salet _yg__ allay __ggy bylaw ggggg
+salet _yg__ allay __ggg inlay ggggg
+salet _yg__ allay _ygg_ lilac ggggg
+salet _yg__ allay y_g__ polka ggggg
+salet _yg__ allay yyg__ villa ggggg
+salet _yg__ allay g_g__ aglow ggggg
+salet _yg__ allay ggg__ allow ggggg
+salet _yg__ allay ggg_g alloy ggggg
+salet _yg__ allay ggggg
 salet _gyg_ nymph _____ lager ygyg_ gavel ggggg
 salet _gyg_ nymph _____ lager yggg_ bagel ggggg
 salet _gyg_ nymph _____ lager gg_g_ label ggggg
@@ -1970,16 +1970,16 @@ salet g__yy unrip _y_g_ stein ggggg
 salet g__yy unrip _yy__ stern ggggg
 salet g__yy unrip y___g setup ggggg
 salet g__yy unrip y__y_ suite ggggg
-salet _g_gy trump yy___ witch __g__ eater ggggg
-salet _g_gy trump yy___ witch __g_y hater ggggg
-salet _g_gy trump yy___ witch __gy_ cater ggggg
-salet _g_gy trump yy___ witch g_g__ water ggggg
-salet _g_gy trump y____ eaten ggggg
-salet _g_gy trump y__y_ matey ggggg
-salet _g_gy trump g____ taken ggggg
-salet _g_gy trump gy___ taker ggggg
-salet _g_gy trump gy__y taper ggggg
-salet _g_gy trump gy_y_ tamer ggggg
+salet _g_gy tweer g__gg yumps _____ taker ggggg
+salet _g_gy tweer g__gg yumps ___y_ taper ggggg
+salet _g_gy tweer g__gg yumps __g__ tamer ggggg
+salet _g_gy tweer y__gg hater _gggg cater ggggg
+salet _g_gy tweer y__gg hater ggggg
+salet _g_gy tweer y__g_ matey ggggg
+salet _g_gy tweer y_yg_ eaten ggggg
+salet _g_gy tweer y_ygg eater ggggg
+salet _g_gy tweer yy_gg water ggggg
+salet _g_gy tweer g__g_ taken ggggg
 salet yg___ spins y____ marsh _gggg harsh ggggg
 salet yg___ spins y____ marsh ggggg
 salet yg___ spins y___y gassy ggggg
@@ -2009,10 +2009,10 @@ salet y___y gurdy _g_yg dusty ggggg
 salet y___y gurdy _gy_g rusty ggggg
 salet y___y gurdy gg___ gusto ggggg
 salet y___y gurdy gg__g gusty ggggg
+salet y__yy troth ___g_ zesty ggggg
+salet y__yy troth __yg_ pesto ggggg
 salet y__yy troth y____ fetus ggggg
-salet y__yy troth y__g_ zesty ggggg
 salet y__yy troth y_y_y ethos ggggg
-salet y__yy troth y_yg_ pesto ggggg
 salet y__yy troth g____ tense ggggg
 salet y__yy troth g___y these ggggg
 salet y__yy troth g__g_ testy ggggg
@@ -2036,12 +2036,12 @@ salet gy_yy gryke ___yg skate ggggg
 salet gy_yy gryke ___gg stake ggggg
 salet gy_yy gryke _y__g stare ggggg
 salet gy_yy gryke y___g stage ggggg
+salet __y_y troll y___g until ggggg
 salet __y_y troll y__y_ blitz ggggg
-salet __y_y troll y__yg until ggggg
 salet __y_y troll y_yy_ lofty ggggg
 salet __y_y troll y_yg_ hotly ggggg
 salet __y_y troll y_gy_ cloth ggggg
-salet __y_y troll gy_yg twirl ggggg
+salet __y_y troll gy__g twirl ggggg
 salet __y_y troll gg_g_ truly ggggg
 salet __y_y troll ggggg
 salet _yyyg reply _y_y_ cleat _gggg bleat ggggg
@@ -2052,20 +2052,20 @@ salet _yyyg reply _g_y_ leant ggggg
 salet _yyyg reply _g_g_ dealt ggggg
 salet _yyyg reply _gyy_ leapt ggggg
 salet _yyyg reply yy_y_ alert ggggg
-salet _gyy_ cadgy _g___ maple _g_gg fable ggggg
-salet _gyy_ cadgy _g___ maple ggggg
-salet _gyy_ cadgy _g__g early ggggg
-salet _gyy_ cadgy _g_y_ eagle ggggg
-salet _gyy_ cadgy _g_g_ large ggggg
-salet _gyy_ cadgy _gg__ ladle ggggg
-salet _gyy_ cadgy yg___ lance ggggg
-salet _gyy_ cadgy gg___ cable ggggg
+salet _gyy_ perce ____g ladle _g_gg fable ggggg
+salet _gyy_ perce ____g ladle ggggg
+salet _gyy_ perce ___yg cable ggggg
+salet _gyy_ perce ___gg lance ggggg
+salet _gyy_ perce __g_g large ggggg
+salet _gyy_ perce _y__g eagle ggggg
+salet _gyy_ perce _yg__ early ggggg
+salet _gyy_ perce y___g maple ggggg
+salet y__g_ rumor ____g wiser ggggg
 salet y__g_ rumor ___y_ nosey ggggg
+salet y__g_ rumor ___yg poser ggggg
+salet y__g_ rumor __y_g miser ggggg
+salet y__g_ rumor _y__g usher ggggg
 salet y__g_ rumor _g___ bused ggggg
-salet y__g_ rumor y___g wiser ggggg
-salet y__g_ rumor y__yg poser ggggg
-salet y__g_ rumor y_y_g miser ggggg
-salet y__g_ rumor yy__g usher ggggg
 salet y__g_ rumor g____ risen ggggg
 salet y__g_ rumor g___g riser ggggg
 salet yyy__ pucks ____y flash ggggg
@@ -2084,12 +2084,12 @@ salet gg___ yupon y___y sandy ggggg
 salet gg___ yupon y__g_ savoy ggggg
 salet gg___ yupon y_g__ sappy ggggg
 salet gg___ yupon yy___ saucy ggggg
+salet __yyy title __gyy extol ggggg
+salet __yyy title _ggyg lithe ggggg
 salet __yyy title y__yy lefty ggggg
 salet __yyy title y__yg flute ggggg
-salet __yyy title y_gyy extol ggggg
 salet __yyy title yy_yg elite ggggg
 salet __yyy title yy_gg utile ggggg
-salet __yyy title yggyg lithe ggggg
 salet __yyy title ggggg
 salet _y_g_ unrip _____ abbey ggggg
 salet _y_g_ unrip __y__ amber ggggg
@@ -2118,17 +2118,17 @@ salet _gg__ rally _gggg dally ggggg
 salet _gg__ rally ygg__ valor ggggg
 salet _gg__ rally ggg__ ralph ggggg
 salet _gg__ rally ggggg
-salet yy__g tract y_y_g angst ggggg
-salet yy__g tract y_yyg ascot ggggg
-salet yy__g tract y_g_g boast ggggg
-salet yy__g tract y_gyg coast ggggg
-salet yy__g tract yyg_g roast ggggg
+salet yy__g tract __y_g angst ggggg
+salet yy__g tract __yyg ascot ggggg
+salet yy__g tract __g_g boast ggggg
+salet yy__g tract __gyg coast ggggg
+salet yy__g tract _yg_g roast ggggg
 salet yy__g tract g_g_g toast ggggg
 salet yg__y tythe yy___ pasty _gggg nasty ggggg
 salet yg__y tythe yy___ pasty ggggg
+salet yg__y tythe _yg__ patsy ggggg
 salet yg__y tythe y____ pasta ggggg
 salet yg__y tythe yy_y_ hasty ggggg
-salet yg__y tythe yyg__ patsy ggggg
 salet yg__y tythe gyy__ tasty ggggg
 salet yg_yy witch __y__ upbye ____g taste ggggg
 salet yg_yy witch __y__ upbye __y_g baste ggggg
@@ -2205,7 +2205,7 @@ salet _gyyy latte ggggg
 salet _gg_y talon ygg__ waltz ggggg
 salet _gg_y talon ggg__ tally ggggg
 salet _gg_y talon ggggg
-salet _ggy_ valve ygggg halve ggggg
+salet _ggy_ valve _gggg halve ggggg
 salet _ggy_ valve ggg_g value ggggg
 salet _ggy_ valve ggggg
 salet yy__y trash y_yy_ vista ggggg
@@ -2245,7 +2245,7 @@ salet __ggg inlet y_ggg filet ggggg
 salet __ggg inlet ggggg
 salet _yyg_ angel gy_gy alien ggggg
 salet _yyg_ angel ggggg
-salet _ygg_ alley gygg_ abled ggggg
+salet _ygg_ alley g_gg_ abled ggggg
 salet _ygg_ alley ggggg
 salet _g_gg facet _gygg cadet ggggg
 salet _g_gg facet ggggg
@@ -2259,7 +2259,7 @@ salet yy_g_ askew gg_g_ ashen ggggg
 salet yy_g_ askew ggggg
 salet g__gg sweet g_ggg sheet ggggg
 salet g__gg sweet ggggg
-salet g_y_g stilt gyggg spilt ggggg
+salet g_y_g stilt g_ggg spilt ggggg
 salet g_y_g stilt ggggg
 salet g_yyy style gg_gg stole ggggg
 salet g_yyy style ggggg
