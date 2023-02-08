@@ -50,7 +50,7 @@ pub fn avg_turns(mut words: usize) -> usize {
     out + i * words
 }
 
-fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut Vec<usize>, words: I, guess: usize) {
+fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut [usize], words: I, guess: usize) {
     for w in words {
         buf[TABLE[guess][w] as usize] += 1;
     }

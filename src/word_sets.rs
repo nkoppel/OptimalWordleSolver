@@ -2,7 +2,7 @@ use crate::words::*;
 
 use std::{iter::Cloned, slice::Iter};
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Hash)]
 pub struct WordSet(pub Vec<usize>);
 
 impl WordSet {

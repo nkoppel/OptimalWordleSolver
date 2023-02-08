@@ -56,9 +56,9 @@ pub fn get_word_map(words: Vec<String>) -> HashMap<String, usize> {
 pub fn gen_hint_table<T: AsRef<[u8]>>(solutions: &[T], guesses: &[T]) -> Vec<Vec<u8>> {
     let mut out = vec![vec![0; solutions.len()]; guesses.len()];
 
-    for i in 0..guesses.len() {
-        for j in 0..solutions.len() {
-            out[i][j] = get_hint(&guesses[i], &solutions[j]);
+    for (out_row, guess) in out.iter_mut().zip(guesses.iter()) {
+        for (o, solution) in out_row.iter_mut().zip(solutions.iter()) {
+            *o = get_hint(guess, solution);
         }
     }
 
