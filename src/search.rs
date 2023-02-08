@@ -4,7 +4,7 @@ use crate::searchtree::*;
 
 use std::io::Write;
 
-fn is_complete(r: &Result<AvgNode, f64>) -> bool {
+fn is_complete(r: &Result<AvgNode, usize>) -> bool {
     if let Ok(node) = r {
         node.branches.len() == node.hint_ordering.len()
     } else {
@@ -59,7 +59,7 @@ impl BestNode {
 
             // propogate new turn values
             avg.update_turns(guess, &words);
-            self.update_turns();
+            self.update_turns(&words);
             true
         } else {
             // create a new tree
@@ -83,7 +83,7 @@ impl BestNode {
 
             // propogate new turn values
             avg.update_turns(guess, &words);
-            self.update_turns();
+            self.update_turns(&words);
 
             true
         }

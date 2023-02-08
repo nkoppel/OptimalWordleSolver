@@ -99,11 +99,11 @@ pub fn hint_to_str(mut hint: u8) -> String {
 
 lazy_static! {
     // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/guess_words.txt"   );
-    // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/solution_words.txt");
-    // pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/solution_words.txt");
+    pub static ref GUESS_WORDS   : Vec<String> = read_words("words/solution_words.txt");
+    pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/solution_words.txt");
 
-    pub static ref GUESS_WORDS   : Vec<String> = read_words("words/squabble_words.txt");
-    pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/squabble_words.txt");
+    // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/testing_words.txt");
+    // pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/testing_words.txt");
 
     pub static ref GUESS_MAP:    HashMap<String, usize> = get_word_map(GUESS_WORDS   .clone());
     pub static ref SOLUTION_MAP: HashMap<String, usize> = get_word_map(SOLUTION_WORDS.clone());

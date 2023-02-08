@@ -9,26 +9,45 @@ pub const HINT_POSSIBILITIES: usize = 243;
 // word has been guessed and the game is over
 pub const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
 
-pub fn avg_turns(words: usize) -> f64 {
-    let mut words = words as f64;
+// pub fn avg_turns(words: usize) -> f64 {
+    // let mut words = words as f64;
 
-    if words == 0. {
-        return 0.;
+    // if words == 0. {
+        // return 0.;
+    // }
+
+    // let mut out = 0.;
+    // let mut denom = 1.;
+    // let mut i = 1.;
+
+    // while words > 1. {
+        // out += i / words;
+        // denom -= 1. / words;
+
+        // words /= HINT_POSSIBILITIES as f64;
+        // i += 1.;
+    // }
+
+    // out + i * denom
+// }
+
+pub fn avg_turns(mut words: usize) -> usize {
+    if words == 0 {
+        return 0;
     }
 
-    let mut out = 0.;
-    let mut denom = 1.;
-    let mut i = 1.;
+    let mut out = 0;
+    let mut factor = 1;
+    let mut i = 1;
 
-    while words > 1. {
-        out += i / words;
-        denom -= 1. / words;
-
-        words /= HINT_POSSIBILITIES as f64;
-        i += 1.;
+    while factor < words {
+        words -= factor;
+        out += i * factor;
+        factor *= HINT_POSSIBILITIES;
+        i += 1;
     }
 
-    out + i * denom
+    out + i * words
 }
 
 fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut Vec<usize>, words: I, guess: usize) {
@@ -57,8 +76,8 @@ pub fn weighted_average<I, J>(weights: I, nums: J) -> f64
 
 thread_local!(static BUFFER: RefCell<Vec<usize>> = RefCell::new(vec![0; HINT_POSSIBILITIES]));
 
-pub fn guess_turns<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
-    let mut out = 0.;
+pub fn guess_turns<I: Iterator<Item=usize>>(words: I, guess: usize) -> usize {
+    let mut out = 0;
 
     BUFFER.with(|buf| {
         let mut buf = buf.borrow_mut();
@@ -67,16 +86,17 @@ pub fn guess_turns<I: Iterator<Item=usize>>(words: I, guess: usize) -> f64 {
 
         get_hint_frequency(&mut buf, words, guess);
 
-        let weights = buf.iter().map(|x| *x as f64);
-        let turns = buf.iter().enumerate().map(|(i, w)| {
-            if i == ALL_GREEN {
-                0.
-            } else {
-                avg_turns(*w)
-            }
-        });
-
-        out = weighted_average(weights, turns);
+        out = buf
+            .iter()
+            .enumerate()
+            .map(|(i, w)| {
+                if i == ALL_GREEN {
+                    0
+                } else {
+                    avg_turns(*w)
+                }
+            })
+            .sum();
     });
 
     out
@@ -98,39 +118,39 @@ fn loc_of_min<I, T>(iter: I) -> Option<(usize, T)>
         })
 }
 
-pub fn best_turns(words: &WordSet) -> (usize, f64) {
+pub fn best_turns(words: &WordSet) -> (usize, usize) {
     let words = words.iter().collect::<Vec<_>>();
 
     loc_of_min (
         (0..GUESS_WORDS.len())
-            .map(|g| 1. + guess_turns(words.iter().copied(), g))
-            .filter(|t| *t != 0.)
-    ).unwrap_or((GUESS_WORDS.len(), 0.))
+            .map(|g| words.len() + guess_turns(words.iter().copied(), g))
+            .filter(|t| *t != 0)
+    ).unwrap_or((GUESS_WORDS.len(), 0))
 }
 
 #[derive(Clone, Debug)]
 pub struct BestNode {
     pub(crate) best_guess: usize,
-    pub(crate) turns: f64,
+    pub(crate) turns: usize,
     pub(crate) complete: bool,
 
-    pub(crate) branches: Vec<Result<AvgNode, f64>>
+    pub(crate) branches: Vec<Result<AvgNode, usize>>
 }
 
 #[derive(Clone, Debug)]
 pub struct AvgNode {
-    pub(crate) turns: f64,
+    pub(crate) turns: usize,
 
     pub(crate) hint_ordering: Vec<u8>,
     pub(crate) next_branch: usize,
-    pub(crate) branches: Vec<Result<BestNode, f64>>
+    pub(crate) branches: Vec<Result<BestNode, usize>>
 }
 
 impl AvgNode {
     pub fn new(guess: usize, parent_words: &WordSet) -> Self {
         let mut out =
             Self {
-                turns: 0.,
+                turns: 0,
                 hint_ordering: Vec::new(),
                 next_branch: 0,
                 branches: Vec::new(),
@@ -163,16 +183,15 @@ impl AvgNode {
 
         get_hint_frequency(&mut freqs, parent_words.iter(), guess);
 
-        let weights = self.hint_ordering.iter().map(|x| freqs[*x as usize] as f64);
-        let entropies = (0..self.hint_ordering.len())
+        self.turns = (0..self.hint_ordering.len())
             .map(|i| {
                 let hint = self.hint_ordering[i] as usize;
                 let n_words = freqs[hint];
 
                 if n_words == 0 || hint == ALL_GREEN {
-                    0.
+                    0
                 } else if n_words == 1 {
-                    1.
+                    1
                 } else if i < self.branches.len() {
                     match self.branches[i] {
                         Ok(BestNode{turns: t, ..}) | Err(t) => t
@@ -180,15 +199,14 @@ impl AvgNode {
                 } else {
                     avg_turns(n_words)
                 }
-            });
-
-        self.turns = weighted_average(weights, entropies);
+            })
+            .sum();
     }
 }
 
 impl BestNode {
     // computes the number of turns remaining and the best word from "guess_turns"
-    pub fn update_turns(&mut self) {
+    pub fn update_turns(&mut self, words: &WordSet) {
         let (loc, min) =
             loc_of_min(self.branches
                 .iter()
@@ -198,23 +216,23 @@ impl BestNode {
                 .unwrap();
 
         self.best_guess = loc;
-        self.turns = *min + 1.;
+        self.turns = *min + words.len();
     }
 
     pub fn new(words: &WordSet) -> Self {
         let mut out =
             Self {
                 best_guess: 0,
-                turns: 0.,
+                turns: 0,
                 complete: false,
-                branches: vec![Err(0.); GUESS_WORDS.len()],
+                branches: vec![Err(0); GUESS_WORDS.len()],
             };
 
         for guess in 0..GUESS_WORDS.len() {
             out.branches[guess] = Err(guess_turns(words.iter(), guess));
         }
 
-        out.update_turns();
+        out.update_turns(words);
 
         out
     }

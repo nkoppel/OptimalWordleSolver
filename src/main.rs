@@ -29,4 +29,7 @@ fn main() {
 
     tree.write_strategy(words, "", &mut File::create("squabble_solution.txt").unwrap());
     println!("{}", tree.turns);
+    
+    // println!("{}", avg_turns(245));
+    // println!("{}", avg_turns_2(245) as f64 / 245.);
 }
