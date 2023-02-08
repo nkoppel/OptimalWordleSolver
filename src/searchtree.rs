@@ -44,10 +44,8 @@ pub fn weighted_average<I, J>(weights: I, nums: J) -> f64
     let mut sum = 0.;
 
     for (weight, num) in weights.zip(nums) {
-        if weight != 0. {
-            out += weight * num;
-            sum += weight;
-        }
+        out += weight * num;
+        sum += weight;
     }
 
     if sum == 0. {
