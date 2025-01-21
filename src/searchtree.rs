@@ -9,28 +9,6 @@ pub const HINT_POSSIBILITIES: usize = 243;
 // word has been guessed and the game is over
 pub const ALL_GREEN: usize = HINT_POSSIBILITIES - 1;
 
-// pub fn avg_turns(words: usize) -> f64 {
-    // let mut words = words as f64;
-
-    // if words == 0. {
-        // return 0.;
-    // }
-
-    // let mut out = 0.;
-    // let mut denom = 1.;
-    // let mut i = 1.;
-
-    // while words > 1. {
-        // out += i / words;
-        // denom -= 1. / words;
-
-        // words /= HINT_POSSIBILITIES as f64;
-        // i += 1.;
-    // }
-
-    // out + i * denom
-// }
-
 pub fn avg_turns(mut words: usize) -> usize {
     if words == 0 {
         return 0;
@@ -51,26 +29,10 @@ pub fn avg_turns(mut words: usize) -> usize {
 }
 
 fn get_hint_frequency<I: Iterator<Item=usize>>(buf: &mut [usize], words: I, guess: usize) {
+    let guess_table = &TABLE[guess];
+
     for w in words {
-        buf[TABLE[guess][w] as usize] += 1;
-    }
-}
-
-pub fn weighted_average<I, J>(weights: I, nums: J) -> f64
-    where I: Iterator<Item=f64>, J: Iterator<Item=f64>
-{
-    let mut out = 0.;
-    let mut sum = 0.;
-
-    for (weight, num) in weights.zip(nums) {
-        out += weight * num;
-        sum += weight;
-    }
-
-    if sum == 0. {
-        0.
-    } else {
-        out / sum
+        buf[guess_table[w] as usize] += 1;
     }
 }
 
@@ -236,4 +198,29 @@ impl BestNode {
 
         out
     }
+}
+
+extern crate test;
+
+#[bench]
+fn b_avg_turns(b: &mut test::Bencher) {
+    b.iter(|| avg_turns(test::black_box(2309)))
+}
+
+
+#[bench]
+fn b_get_hint_frequency(b: &mut test::Bencher) {
+    let mut buf = [0; 243];
+    b.iter(|| {
+        let out = get_hint_frequency(&mut buf, test::black_box(0..2309), test::black_box(0));
+        buf.fill(0);
+        out
+    });
+}
+
+#[bench]
+fn b_guess_turns(b: &mut test::Bencher) {
+    b.iter(|| {
+        guess_turns(test::black_box(0..2309), test::black_box(0))
+    });
 }

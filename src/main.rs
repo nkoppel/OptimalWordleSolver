@@ -27,7 +27,7 @@ fn main() {
         }
     }
 
-    tree.write_strategy(words, "", &mut File::create("squabble_solution.txt").unwrap());
+    tree.write_strategy(words, "", &mut File::create("solution.txt").unwrap());
     println!("{}", tree.turns);
     
     // println!("{}", avg_turns(245));

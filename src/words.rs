@@ -44,13 +44,7 @@ fn get_hint<T: AsRef<[u8]>>(guess: T, answer: T) -> u8 {
 }
 
 pub fn get_word_map(words: Vec<String>) -> HashMap<String, usize> {
-    let mut out = HashMap::new();
-
-    for (i, w) in words.into_iter().enumerate() {
-        out.insert(w, i);
-    }
-
-    out
+    words.into_iter().enumerate().map(|(v, k)| (k, v)).collect()
 }
 
 pub fn gen_hint_table<T: AsRef<[u8]>>(solutions: &[T], guesses: &[T]) -> Vec<Vec<u8>> {
@@ -99,8 +93,11 @@ pub fn hint_to_str(mut hint: u8) -> String {
 
 lazy_static! {
     // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/guess_words.txt"   );
-    pub static ref GUESS_WORDS   : Vec<String> = read_words("words/solution_words.txt");
-    pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/solution_words.txt");
+    // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/solution_words.txt");
+    // pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/solution_words.txt");
+
+    pub static ref GUESS_WORDS   : Vec<String> = read_words("words/guess_words_2.txt"   );
+    pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/solution_words_2.txt");
 
     // pub static ref GUESS_WORDS   : Vec<String> = read_words("words/testing_words.txt");
     // pub static ref SOLUTION_WORDS: Vec<String> = read_words("words/testing_words.txt");
@@ -129,5 +126,12 @@ fn t_get_hint() {
 
 #[bench]
 fn b_get_hint(b: &mut test::Bencher) {
-    b.iter(|| test::black_box(get_hint("eagle", "reads")))
+    use test::black_box;
+    b.iter(|| get_hint(black_box("eagle"), black_box("reads")))
 }
+
+// #[bench]
+// fn b_gen_hint_table(b: &mut test::Bencher) {
+    // use test::black_box;
+    // b.iter(|| gen_hint_table(black_box(&SOLUTION_WORDS), black_box(&GUESS_WORDS)))
+// }
